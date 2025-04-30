@@ -23,7 +23,18 @@ command in the Command Palette:
 
 - `PGSQL: Show Tools Service Logs`.
 
-Both of these logs can include host names, user names and other data that may be
+In rarer cases, the logs may be found in the VS Code logging directory, per session. Adjust
+the following path for your system:
+
+`C:\Users\{username}\AppData\Roaming\Code\logs\{date-sessionid}\window1\exthost\output_logging_{datesessionid}\`
+
+There may be variations on `window1` and `exthost` where a number is appended. 
+Look for log files whose name contains the terms:
+
+* `PGToolsService`
+* `Microsoft PostgreSQL`
+
+All of these logs could include host names, user names and other data that may be
 sensitive. Please review their contents before sharing these logs with others, or
 attaching them to an issue.
 
