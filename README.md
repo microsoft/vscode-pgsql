@@ -3,8 +3,8 @@
 The PGSQL extension for Visual Studio Code is undergoing a transformation to
 become the first-class tool for developers connecting to their localhost and
 cloud PostgreSQL databases, including Azure Database for PostgreSQL. This
-extension will empower developers to build applications with Azure Database for
-PostgreSQL to achieve more.
+extension empowers developers to build applications with Azure Database for
+PostgreSQL, enabling them to achieve more.
 
 ## Usage and feedback
 
@@ -18,25 +18,30 @@ extension logs for the current session by:
 2. Typing `PGSQL: Show Extension Logs` and selecting the option.
 3. The logs will be displayed in the Output panel. You can copy and paste the logs from there.
 
-The Tools Service also outputs logs to disk. These can be opened by running this
-command in the Command Palette:
+The Tools Service also outputs logs to disk, which can be accessed by running
+this command in the Command Palette:
 
 - `PGSQL: Show Tools Service Logs`.
 
-In rarer cases, the logs may be found in the VS Code logging directory, per session. Adjust
-the following path for your system:
+In rarer cases, the logs may be found in the VS Code logging directory, per
+session. To open the session log folder, run this command in the Command
+Palette:
 
-`C:\Users\{username}\AppData\Roaming\Code\logs\{date-sessionid}\window1\exthost\output_logging_{datesessionid}\`
+- `Developer: Open Logs Folder`.
 
-There may be variations on `window1` and `exthost` where a number is appended. 
 Look for log files whose name contains the terms:
 
-* `PGToolsService`
-* `Microsoft PostgreSQL`
+- `Microsoft PostgreSQL Tools Service`
+- `Microsoft PostgreSQL`
 
 All of these logs could include host names, user names and other data that may be
 sensitive. Please review their contents before sharing these logs with others, or
 attaching them to an issue.
+
+## Supported Operating Systems
+
+The extension is supported on recent Windows, macOS, and Linux distributions. Experimental
+support for ARM64 is available on Linux and macOS.
 
 ## Telemetry
 
