@@ -6,6 +6,9 @@ cloud PostgreSQL databases, including Azure Database for PostgreSQL. This
 extension empowers developers to build applications with Azure Database for
 PostgreSQL, enabling them to achieve more.
 
+To learn more about the PostgreSQL extension and how it can simplify building
+applications on PostgreSQL, visit our official [MSFT Learn Documentation].
+
 ## Usage and feedback
 
 For details on how to receive support for this extension, please see the
@@ -83,3 +86,4 @@ Use of Microsoft trademarks or logos in modified versions of this project must n
 Any use of third-party trademarks or logos are subject to those third-party's policies.
 
 [disable telemetry reporting]: https://code.visualstudio.com/docs/getstarted/telemetry#_disable-telemetry-reporting
+[MSFT Learn Documentation]: https://aka.ms/pg-vscode-docs
