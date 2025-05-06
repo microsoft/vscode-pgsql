@@ -12,7 +12,7 @@ applications on PostgreSQL, visit our official [MSFT Learn Documentation].
 ## Usage and feedback
 
 For details on how to receive support for this extension, please see the
-[SUPPORT](SUPPORT) document.
+[SUPPORT.md](SUPPORT.md) document.
 
 When reporting issues, it may be helpful to include debug logs. You can view
 extension logs for the current session by:
