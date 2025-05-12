@@ -85,5 +85,12 @@ trademarks or logos is subject to and must follow
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
 
+## Third-party licenses
+
+This project may contain third-party libraries. The licenses for these libraries
+are located in [Third-party notices (extension)] and [Third-party notices (tools)].
+
 [disable telemetry reporting]: https://code.visualstudio.com/docs/getstarted/telemetry#_disable-telemetry-reporting
 [MSFT Learn Documentation]: https://aka.ms/pg-vscode-docs
+[Third-party notices (extension)]: ThirdPartyNotices-EXTENSION.txt
+[Third-party notices (tools)]: ThirdPartyNotices-TOOLS.txt
