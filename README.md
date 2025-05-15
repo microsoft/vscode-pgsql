@@ -1,5 +1,7 @@
 # PostgreSQL for Visual Studio Code (Preview)
 
+![PostgreSQL for Visual Studio Code](img/intro-vid.gif)
+
 The PGSQL extension for Visual Studio Code is undergoing a transformation to
 become the first-class tool for developers connecting to their localhost and
 cloud PostgreSQL databases, including Azure Database for PostgreSQL. This
