@@ -1,13 +1,51 @@
 # PostgreSQL for Visual Studio Code (Preview)
 
-The PGSQL extension for Visual Studio Code is undergoing a transformation to
-become the first-class tool for developers connecting to their localhost and
-cloud PostgreSQL databases, including Azure Database for PostgreSQL. This
-extension empowers developers to build applications with Azure Database for
-PostgreSQL, enabling them to achieve more.
+![PostgreSQL for Visual Studio Code](img/intro-vid.gif)
+
+PostgreSQL for Visual Studio Code is the essential extension for working with PostgreSQL databases - locally or in the cloud. Connect, query, build, and chat with your databases with ease, including seamless Entra authentication for Azure Database for PostgreSQL.
 
 To learn more about the PostgreSQL extension and how it can simplify building
 applications on PostgreSQL, visit our official [MSFT Learn Documentation].
+
+## Features
+
+Below are some of the key features of the PostgreSQL extension:
+
+### Connect to PostgreSQL
+
+Connect to any PostgreSQL database.
+
+![Connect to PostgreSQL](img/connect-local-vid.gif)
+
+Browse Azure to easily find and connect to your Azure Database for PostgreSQL servers with either password or Entra authentication.
+
+![Connect to Azure PostgreSQL](img/connect-azure-vid.gif)
+
+### Schema Visualization
+
+Visualize your database schema quickly in VS Code.
+
+![Schema Visualization](img/schema-viz-vid.gif)
+
+### Copilot @pgsql agent
+
+Chat with your database using the @pgsql agent in Copilot 'Ask' mode. Requires GitHub Copilot.
+
+### Agent Mode Tools
+
+Supercharge your workflow with GitHub Copilot Agent Mode tools, which allows the agents to run SQL queries, create tables, design schemas, import CSV files, and more.
+
+### Create a docker PostgreSQL
+
+Create a PostgreSQL database in a Docker container easily with a few clicks.
+
+### Query
+
+Run queries in a connected, intellisense-enabled VS Code editor. Results are displayed in a grid view, and you can easily export the results to CSV, JSON, or Excel.
+
+### Run psql
+
+Quickly connect psql to any of your databases, including Azure Database for PostgreSQL with Entra authentication.
 
 ## Usage and feedback
 
