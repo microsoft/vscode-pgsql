@@ -28,7 +28,7 @@ If applicable, add screenshots to help explain your problem.
 
 **VS Code version**
 
-Please copy the platform version information from `Help -> About` (Windows) or `Code -> About Visual Studio Code`
+Please copy the platform version information from `Help -> About` (Windows) or `Code -> About Visual Studio Code` (macOS)
 
 **Extension Logs**
 
