@@ -56,7 +56,15 @@ Run queries in a connected, intellisense-enabled VS Code editor. Results are dis
 
 Quickly connect psql to any of your databases, including Azure Database for PostgreSQL with Entra authentication.
 
-## Usage and feedback
+## Usage
+
+Get started with the PostgreSQL extension by installing it from the [Visual Studio Code Extension Market](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-pgsql).
+
+By default, Copilot integrations are disabled as they are still experimental features. To enable these, open your settings in `File -> Preferences -> Settings` or by hitting `ctrl + ,` then search for `pgsql copilot` and check the box for `Pgsql > Copilot : Enable`. This will prompt you to reload your window to apply the changes, after which you will be able to use the Copilot features.
+
+![Agent Mode Tools](img/enable-agent-mode.png)
+
+## Feedback
 
 For details on how to receive support for this extension, please see the
 [SUPPORT.md](SUPPORT.md) document.
