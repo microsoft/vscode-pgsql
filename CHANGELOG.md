@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.5.0] - 2025-06-19
+
+### Added
+
+- Support for selecting Entra Tenant when using Entra ID authentication for PostgreSQL connections
+- Support for providing a custom user name or Security Group name when using Entra ID authentication for PostgreSQL connections
+- Improved process and thread management for the PostgreSQL Tools Service, including better handling of service restarts and process terminations
+- Validate file integrity when downloading PostgreSQL Tools Service archive
+- Support for Docker `platform` argument when using custom images for new Docker PostgreSQL creation. This is required for ARM64 architecture support on some images like PostGIS.
+
+### Fixed
+
+- PostgreSQL connection string parsing errors, including issues with underscore characters and connection strings without passwords
+- Entra ID token fetching issues and account validation scenarios
+- Extension startup crashes caused by invalid or corrupted connection profiles (now validated and ignored on startup)
+
+### Changed
+
+- @pgsql Copilot Chat participant is enabled by default. If GH Copilot Chat is installed, it can be used for chat interactions with your PostgreSQL databases.
+- Improved layout of command buttons in Query History window
+
 ## [1.4.2] - 2025-05-28
 
 ### Changed
