@@ -1,6 +1,14 @@
 # Changelog
 
+Following VS Code guidance, the PostgreSQL extension uses **odd** minor version numbers for
+pre-releases and **even** minor version numbers for stable releases.
+
+Read more about pre-release versioning behavior for extensions in the
+[VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
+
 ## [1.5.0] - 2025-06-19
+
+_Pre-release version_
 
 ### Added
 
@@ -38,6 +46,8 @@
 - Broken relative links in bundled README
 
 ## [1.3.1] - 2025-05-15
+
+_Pre-release version_
 
 ### Fixed
 
