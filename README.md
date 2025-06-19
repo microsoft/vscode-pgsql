@@ -7,6 +7,16 @@ PostgreSQL for Visual Studio Code is the essential extension for working with Po
 To learn more about the PostgreSQL extension and how it can simplify building
 applications on PostgreSQL, visit our official [MSFT Learn Documentation].
 
+## Supported Operating Systems
+
+The extension is supported on the following operating systems:
+
+- **Windows**: x64 only (ARM64 is not currently supported)
+- **Linux**: x64 and ARM64 (requires glibc 2.35+)
+- **macOS**: macOS 13+
+  - For macOS ARM64: Some backend services are yet to be converted to native ARM64 binaries. You need to install Rosetta 2:
+    > `/usr/sbin/softwareupdate --install-rosetta --agree-to-license`
+
 ## Features
 
 Below are some of the key features of the PostgreSQL extension:
@@ -95,11 +105,6 @@ Look for log files whose name contains the terms:
 All of these logs could include host names, user names and other data that may be
 sensitive. Please review their contents before sharing these logs with others, or
 attaching them to an issue.
-
-## Supported Operating Systems
-
-The extension is supported on recent Windows, macOS, and Linux distributions. Experimental
-support for ARM64 is available on Linux and macOS.
 
 ## Telemetry
 
