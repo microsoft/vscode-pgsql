@@ -12,21 +12,23 @@ _Pre-release version_
 
 ### Added
 
-- Support for selecting Entra Tenant when using Entra ID authentication for PostgreSQL connections
-- Support for providing a custom user name or Security Group name when using Entra ID authentication for PostgreSQL connections
+- Support for selecting Entra Tenant when using Entra ID authentication for PostgreSQL connections ([#17](https://github.com/microsoft/vscode-pgsql/issues/17))
+- Support for providing a custom user name or Security Group name when using Entra ID authentication for PostgreSQL connections ([#30](https://github.com/microsoft/vscode-pgsql/issues/30))
 - Improved process and thread management for the PostgreSQL Tools Service, including better handling of service restarts and process terminations
 - Validate file integrity when downloading PostgreSQL Tools Service archive
 - Support for Docker `platform` argument when using custom images for new Docker PostgreSQL creation. This is required for ARM64 architecture support on some images like PostGIS.
+- Improved documentation for supported platforms and architectures in the README
 
 ### Fixed
 
-- PostgreSQL connection string parsing errors, including issues with underscore characters and connection strings without passwords
+- IntelliSense stops working after saving SQL file, or when opening a saved SQL file ([#68](https://github.com/microsoft/vscode-pgsql/issues/68))
+- PostgreSQL connection string parsing errors, including issues with underscore characters and connection strings without passwords ([#69](https://github.com/microsoft/vscode-pgsql/issues/69))
 - Entra ID token fetching issues and account validation scenarios
 - Extension startup crashes caused by invalid or corrupted connection profiles (now validated and ignored on startup)
 
 ### Changed
 
-- @pgsql Copilot Chat participant is enabled by default. If GH Copilot Chat is installed, it can be used for chat interactions with your PostgreSQL databases.
+- @pgsql Copilot Chat participant is enabled by default. If GH Copilot Chat is installed, it can be used for chat interactions with your PostgreSQL databases. ([#58](https://github.com/microsoft/vscode-pgsql/issues/58), [#66](https://github.com/microsoft/vscode-pgsql/issues/66))
 - Improved layout of command buttons in Query History window
 
 ## [1.4.2] - 2025-05-28
