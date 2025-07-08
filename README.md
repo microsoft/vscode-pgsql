@@ -17,6 +17,16 @@ The extension is supported on the following operating systems:
   - For macOS ARM64: Some backend services are yet to be converted to native ARM64 binaries. You need to install Rosetta 2:
     > `/usr/sbin/softwareupdate --install-rosetta --agree-to-license`
 
+### Air-gapped environments
+
+This extension requires internet access to download the PostgreSQL Tools Service
+binaries. If you're in an air-gapped environment, you may be able to download
+these binaries on a machine with internet access and transfer them manually, if
+your policies allow.
+
+We're working on providing a more streamlined experience for air-gapped
+environments. You can get details and track progress on [this issue here][air-gapped environments].
+
 ## Features
 
 Below are some of the key features of the PostgreSQL extension:
@@ -32,6 +42,7 @@ Browse Azure to easily find and connect to your Azure Database for PostgreSQL se
 ![Connect to Azure PostgreSQL](img/connect-azure-vid.gif)
 
 ### Explore your database
+
 Easily explore your database objects, including tables, views, functions, and more.
 
 ![Explore your database](img/object-explorer-vid.gif)
@@ -154,3 +165,4 @@ are located in [Third-party notices (extension)] and [Third-party notices (tools
 [MSFT Learn Documentation]: https://aka.ms/pg-vscode-docs
 [Third-party notices (extension)]: ThirdPartyNotices-EXTENSION.txt
 [Third-party notices (tools)]: ThirdPartyNotices-TOOLS.txt
+[air-gapped environments]: https://github.com/microsoft/vscode-pgsql/issues/41
