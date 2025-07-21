@@ -18,7 +18,7 @@ _Pre-release version_
 
 ### Fixed
 
-- Selecting Entra Authentication type in the Connection String dialog for new connections did not populate default Entra Username or Tenant
+- Selecting Entra Authentication type in the Connection String dialog for new connections does not populate default Entra Username or Tenant
 - "Script as ..." command on an Object Explorer node with an expired Entra token fails instead of refreshing the token
 - New connection attempts that used an incorrect Entra token (from a wrong Entra ID or tenant selection in the UI) will fail even after correcting the settings 
 - Connection attempts that fail without error messages are treated as successful by the Object Explorer, but still results in a failed session 
