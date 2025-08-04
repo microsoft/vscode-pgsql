@@ -6,6 +6,18 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.8.0] - 2025-08-04
+
+Stable release.
+
+This is the stable release of the features introduced in `1.7.*`. There are no changes since `1.7.1`, but `1.8.0` marks these features as stable for all users.
+
+## [1.7.1] - 2025-07-23
+
+### Added
+
+- SSH connection configuration includes ssh-agent support for private key authentication ([#123](https://github.com/microsoft/vscode-pgsql/issues/123))
+
 ## [1.7.0] - 2025-07-23
 
 _Pre-release version_
