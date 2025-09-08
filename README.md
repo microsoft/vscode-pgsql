@@ -41,6 +41,10 @@ Browse Azure to easily find and connect to your Azure Database for PostgreSQL se
 
 ![Connect to Azure PostgreSQL](img/connect-azure-vid.gif)
 
+#### Connect via Socket
+
+When configuring a connection that uses sockets, provide the folder path that contains the socket file, not the socket file itself.
+
 ### Explore your database
 
 Easily explore your database objects, including tables, views, functions, and more.
