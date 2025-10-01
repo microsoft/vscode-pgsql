@@ -13,7 +13,7 @@ Read more about pre-release versioning behavior for extensions in the
 - Stabilize memory consumption in long-running dashboard sessions
 - Metric chart x-axis now trims to available data range after user machine sleep or network interruptions
 - System metrics normalize rate calculations after user machine wakes from sleep
-- Handle Azure API failures
+- Handle Azure API failures during metrics polling
 
 ## [1.9.0] - 2025-09-24
 
