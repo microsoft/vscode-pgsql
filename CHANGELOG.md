@@ -6,6 +6,15 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.9.1] - 2025-10-01
+
+### Fixed
+
+- Stabilize memory consumption in long-running dashboard sessions
+- Metric chart x-axis now trims to available data range after user machine sleep or network interruptions
+- System metrics normalize rate calculations after user machine wakes from sleep
+- Handle Azure API failures
+
 ## [1.9.0] - 2025-09-24
 
 ### Added
