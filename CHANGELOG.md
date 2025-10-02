@@ -6,6 +6,12 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.10.0] - 2025-10-02
+
+Stable release.
+
+This is the stable release of the features introduced in `1.9.*`. There are no changes since `1.9.1`, but `1.10.0` marks these features as stable for all users.
+
 ## [1.9.1] - 2025-10-01
 
 ### Fixed
