@@ -6,6 +6,12 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.12.1] - 2025-12-02
+
+### Fixed
+
+- Use new Copilot Chat extension to register @pgsql chat participant, restores "Chat with database" functionality ([#193](https://github.com/microsoft/vscode-pgsql/issues/193))
+
 ## [1.12.0] - 2025-11-14
 
 Stable release.
