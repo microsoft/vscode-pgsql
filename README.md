@@ -15,16 +15,6 @@ The extension is supported on the following operating systems:
 - **Linux**: x64 and ARM64 (requires glibc 2.35+)
 - **macOS**: macOS 13+
 
-### Air-gapped environments
-
-This extension requires internet access to download the PostgreSQL Tools Service
-binaries. If you're in an air-gapped environment, you may be able to download
-these binaries on a machine with internet access and transfer them manually, if
-your policies allow.
-
-We're working on providing a more streamlined experience for air-gapped
-environments. You can get details and track progress on [this issue here][air-gapped environments].
-
 ## Features
 
 Below are some of the key features of the PostgreSQL extension:
