@@ -6,6 +6,24 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.13.0] - 2025-12-15
+
+### Added
+
+- Improved accessibility for Metrics Dashboard with keyboard navigation support for data points and legend controls
+- Schema migrations handle appropriate naming of constrains in the coverted DDL statements
+- Schema migrations handle conversion of partitions for Oracle to PostgreSQL
+
+### Fixed
+
+- Entra ID authentication now supports Personal Microsoft Accounts (MSA) in addition to work/school accounts ([#183](https://github.com/microsoft/vscode-pgsql/issues/183))
+- Connection profiles with duplicate server names, database, and credentials can now be saved, enabling more SSH tunneling and jump host scenarios ([#48](https://github.com/microsoft/vscode-pgsql/issues/48), [#175](https://github.com/microsoft/vscode-pgsql/issues/175))
+- Schema migration correctly handle trigger dependencies which caused extraction failures on some schemas
+
+### Changed
+
+- Additional localization language updates
+
 ## [1.12.1] - 2025-12-02
 
 ### Fixed
