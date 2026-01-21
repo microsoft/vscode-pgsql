@@ -6,6 +6,21 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.15.0] - 2026-01-22
+
+### Added
+
+- The extension is now available on Windows 11 ARM64 devices under Prism emulation
+- Create new Azure Database for PostgreSQL Flexible Server instances directly from the extension
+- Manage Azure Database for PostgreSQL Flexible Server firewall rules, server parameters, and power states directly from the extension
+- **Schema filtering** for schema visualization: select specific schemas to include or exclude when visualizing database schemas, accessible from Object Explorer nodes or directly in the visualization tool ([#49](https://github.com/microsoft/vscode-pgsql/issues/49))
+- SSL connections now support custom file and "system" `sslrootcert` values, pairing "system" selections with `verify-full` sslmode
+- Additional localization language entries
+
+### Fixed
+
+- Table results filter panel layout, sizing, and behavior improvements to prevent clipping and improve usability across different panel sizes ([#189](https://github.com/microsoft/vscode-pgsql/issues/189))
+
 ## [1.14.0] - 2025-12-17
 
 Stable release.
