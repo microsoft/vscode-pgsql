@@ -16,10 +16,19 @@ Read more about pre-release versioning behavior for extensions in the
 - **Schema filtering** for schema visualization: select specific schemas to include or exclude when visualizing database schemas, accessible from Object Explorer nodes or directly in the visualization tool ([#49](https://github.com/microsoft/vscode-pgsql/issues/49))
 - SSL connections now support custom file and "system" `sslrootcert` values, pairing "system" selections with `verify-full` sslmode
 - Additional localization language entries
+- Support for Oracle Thick Client Connection
+- Best Effort conversion when primary conversion reaches messages limit
+- Handle cyclic dependencies in schema objects
+- Display success metrics for programmable/non-programmable objects
 
 ### Fixed
 
 - Table results filter panel layout, sizing, and behavior improvements to prevent clipping and improve usability across different panel sizes ([#189](https://github.com/microsoft/vscode-pgsql/issues/189))
+- Schema migration correctly handle sequence dependencies extraction
+- Topological sorting fix in chunking logic to handle cyclic dependencies
+- Fix conversion % displayed in report for chunk failures
+- Fix connection to Oracle DB using Service ID
+- Convert unique indexes as is and not as primary index
 
 ## [1.14.0] - 2025-12-17
 
