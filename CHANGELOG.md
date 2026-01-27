@@ -6,13 +6,13 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
-## [1.15.0] - 2026-01-22
+## [1.15.0] - 2026-01-27
 
 ### Added
 
-- The extension is now available on Windows 11 ARM64 devices under Prism emulation
+- The extension is now available on Windows 11 ARM64 devices under Prism emulation ([#82](https://github.com/microsoft/vscode-pgsql/issues/82))
 - Create new Azure Database for PostgreSQL Flexible Server instances directly from the extension
-- Manage Azure Database for PostgreSQL Flexible Server firewall rules, server parameters, and power states directly from the extension
+- Manage Azure Database for PostgreSQL Flexible Server firewall rules, server parameters, and server states directly from the extension
 - **Schema filtering** for schema visualization: select specific schemas to include or exclude when visualizing database schemas, accessible from Object Explorer nodes or directly in the visualization tool ([#49](https://github.com/microsoft/vscode-pgsql/issues/49))
 - SSL connections now support custom file and "system" `sslrootcert` values, pairing "system" selections with `verify-full` sslmode
 - [Schema Migrations] Additional localization language entries
@@ -23,6 +23,7 @@ Read more about pre-release versioning behavior for extensions in the
 
 ### Fixed
 
+- Closing query editors returns underlying database connections to the pool for reuse instead exhausting available connections ([#178](https://github.com/microsoft/vscode-pgsql/issues/178))
 - Table results filter panel layout, sizing, and behavior improvements to prevent clipping and improve usability across different panel sizes ([#189](https://github.com/microsoft/vscode-pgsql/issues/189))
 - [Schema Migrations] Correctly handle sequence dependencies extraction
 - [Schema Migrations] Topological sorting fix in chunking logic to handle cyclic dependencies
