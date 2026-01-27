@@ -15,6 +15,7 @@ Read more about pre-release versioning behavior for extensions in the
 - Manage Azure Database for PostgreSQL Flexible Server firewall rules, server parameters, and server states directly from the extension
 - **Schema filtering** for schema visualization: select specific schemas to include or exclude when visualizing database schemas, accessible from Object Explorer nodes or directly in the visualization tool ([#49](https://github.com/microsoft/vscode-pgsql/issues/49))
 - SSL connections now support custom file and "system" `sslrootcert` values, pairing "system" selections with `verify-full` sslmode
+- UI elements in Object Explorer and Query Editor will indicate when an active connection is lost
 - [Schema Migrations] Additional localization language entries
 - [Schema Migrations] Support for Oracle Thick Client Connection
 - [Schema Migrations] Best Effort conversion when primary conversion reaches messages limit
