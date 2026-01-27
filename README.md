@@ -11,9 +11,13 @@ applications on PostgreSQL, visit our official [MSFT Learn Documentation].
 
 The extension is supported on the following operating systems:
 
-- **Windows**: x64 only (ARM64 is not currently supported)
+- **Windows**: x64 and ARM64 (ARM64 requires Windows 11)
 - **Linux**: x64 and ARM64 (requires glibc 2.35+)
 - **macOS**: macOS 13+
+
+## About This Repository
+
+This repository does not contain the source code for the PostgreSQL extension, which is not [open source]. Instead, this repository serves as a hub for [issue tracking], documentation, and community feedback.
 
 ## Features
 
@@ -37,7 +41,7 @@ Easily explore your database objects, including tables, views, functions, and mo
 
 ### Schema Visualization
 
-Visualize your database schema quickly in VS Code.
+Visualize your database schemas quickly in VS Code.
 
 ![Schema Visualization](img/schema-viz-vid.gif)
 
@@ -64,6 +68,14 @@ Get insights into your PostgreSQL server performance with the Server Dashboard.
 Get intelligent insights and help with performance and troubleshooting your PostgreSQL database with integration into Copilot.
 
 ![Metrics Intelligence](img/metrics-copilot.gif)
+
+### Create an Azure Database for PostgreSQL
+
+Create a new Azure Database for PostgreSQL server directly from VS Code with just a few clicks.
+
+### Manage Azure Database for PostgreSQL servers
+
+Manage your Azure Database for PostgreSQL servers, including starting, stopping, firewall rules, server parameters, and more.
 
 ### Create a docker PostgreSQL
 
@@ -164,7 +176,8 @@ This project may contain third-party libraries. The licenses for these libraries
 are located in [Third-party notices (extension)] and [Third-party notices (tools)].
 
 [disable telemetry reporting]: https://code.visualstudio.com/docs/getstarted/telemetry#_disable-telemetry-reporting
+[issue tracking]: https://github.com/microsoft/vscode-pgsql/issues
 [MSFT Learn Documentation]: https://aka.ms/pg-vscode-docs
+[open source]: https://github.com/microsoft/vscode-pgsql/issues/35
 [Third-party notices (extension)]: ThirdPartyNotices-EXTENSION.txt
 [Third-party notices (tools)]: ThirdPartyNotices-TOOLS.txt
-[air-gapped environments]: https://github.com/microsoft/vscode-pgsql/issues/41
