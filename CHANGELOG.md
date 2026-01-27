@@ -24,7 +24,7 @@ Read more about pre-release versioning behavior for extensions in the
 
 ### Fixed
 
-- Closing query editors returns underlying database connections to the pool for reuse instead exhausting available connections ([#178](https://github.com/microsoft/vscode-pgsql/issues/178))
+- Closing query editors returns underlying database connections to the pool for reuse instead of exhausting available connections ([#178](https://github.com/microsoft/vscode-pgsql/issues/178))
 - Table results filter panel layout, sizing, and behavior improvements to prevent clipping and improve usability across different panel sizes ([#189](https://github.com/microsoft/vscode-pgsql/issues/189))
 - [Schema Migrations] Correctly handle sequence dependencies extraction
 - [Schema Migrations] Topological sorting fix in chunking logic to handle cyclic dependencies
