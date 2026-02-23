@@ -6,6 +6,14 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.17.0] - 2026-02-24
+
+## Added
+- [Schema Migrations] Migration service version updated to 2.0.0
+- [Schema Migrations] Migration engine now supports GPT5.2 model
+- [Schema Migrations] Timeout guardrails for agent conversation and OpenAPI connection
+- [Schema Migrations] Object level migration status reporting 
+
 ## [1.16.0] - 2026-01-30
 
 Stable release.
