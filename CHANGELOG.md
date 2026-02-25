@@ -11,8 +11,7 @@ Read more about pre-release versioning behavior for extensions in the
 ## Added
 - [Schema Migrations] Migration service version updated to 2.0.0
 - [Schema Migrations] Migration engine now supports GPT5.2 model
-- [Schema Migrations] Timeout guardrails for agent conversation and OpenAPI connection
-- [Schema Migrations] Object level migration status reporting 
+- [Schema Migrations] Timeout thresholds for agent conversation and OpenAPI connection
 
 ## [1.16.0] - 2026-01-30
 
