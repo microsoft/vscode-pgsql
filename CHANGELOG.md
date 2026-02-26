@@ -21,6 +21,10 @@ Read more about pre-release versioning behavior for extensions in the
 - [Schema Migrations] Timeout thresholds for agent conversation and OpenAPI connection
 - [Schema Migrations] Object-level conversion now uses JSON-based chunking for more reliable handling of large schemas and cyclic table dependencies.
 
+### Breaking Changes
+
+- The `pgsql_list_servers` Language Model Tool (LMT) has been renamed to `pgsql_list_connection_profiles` to align with the MCP tool name used in templated prompts. Any custom prompts or integrations referencing the old `pgsql_list_servers` tool name must be updated.
+
 ### Fixed
 
 - Server parameters multi-select dropdowns now correctly display and match selected values, including case-insensitive comparison against server-returned values
