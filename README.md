@@ -45,6 +45,18 @@ Visualize your database schemas quickly in VS Code.
 
 ![Schema Visualization](img/schema-viz-vid.gif)
 
+### Query Plan Visualization
+
+Explore PostgreSQL EXPLAIN output in four synchronized views: an interactive node graph showing operator relationships, an icicle chart for identifying hotspots, a sortable table for comparing nodes, and a raw source view with Monaco Editor support. Color-coded severity groups highlight performance bottlenecks, and GitHub Copilot integration provides AI-assisted analysis and optimization guidance. Launch the visualizer from the query editor toolbar, the Query Results panel, or the Command Palette.
+
+### Object Explorer Search
+
+Search for database objects by name across connections, databases, and schemas — without manually expanding the Object Explorer tree. Filter by object type (tables, views, functions, sequences, and more) and schema, then click any result to navigate directly to it in the tree. Launch search from the Object Explorer toolbar or by right-clicking any server, database, or schema node.
+
+### Apache AGE Graph Visualization
+
+Run Apache AGE Cypher queries and explore the results as an interactive node-edge graph. The extension automatically detects graph query results and renders them in a visual explorer with per-node callouts, zoom and pan controls, export support, and theme-aware styling.
+
 ### Copilot @pgsql agent
 
 Chat with your database using the @pgsql agent in Copilot 'Ask' mode. Requires GitHub Copilot.
