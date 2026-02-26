@@ -13,7 +13,7 @@ Read more about pre-release versioning behavior for extensions in the
 - **Query Plan Visualization** Explore PostgreSQL EXPLAIN output in four synchronized views: an interactive node graph, icicle chart, sortable table, and raw source. Color-coded severity groups expose performance bottlenecks at a glance, and GitHub Copilot integration provides AI-assisted analysis and optimization suggestions. Launch from the query editor toolbar, the Query Results panel, or the Command Palette. ([read more](README.md#query-plan-visualization))
 - **Object Explorer Search** Find database objects by name without expanding the Object Explorer tree. Search across connections, databases, and schemas; filter by object type (tables, views, functions, sequences, and more) or schema name; and click any result to navigate directly to it in the tree. ([read more](README.md#object-explorer-search))
 - **Graph Visualization** Apache AGE graph query results are automatically detected and rendered as an interactive node-edge graph directly in the results pane, with per-node callouts, zoom and pan controls, export support, and theme-aware styling. ([read more](README.md#apache-age-graph-visualization))
-- **MCP Server** — The extension registers a Model Context Protocol (MCP) server with VS Code and Cursor, enabling AI assistants to discover and interact with your PostgreSQL databases through a standardized tool interface.
+- **MCP Server** — The extension registers a Model Context Protocol (MCP) server with VS Code, enabling AI assistants to discover and interact with your PostgreSQL databases through a standardized tool interface.
 - **Azure Backup Management** — List, create, and delete on-demand backups and configure retention periods for Azure Database for PostgreSQL Flexible Servers directly from VS Code, without switching to the Azure Portal.
 - **Azure Server Logs** — Configure log capture settings, set retention periods, and download server and upgrade logs directly from the Server Dashboard for Azure Database for PostgreSQL Flexible Servers.
 - [Schema Migrations] Migration service version updated to 2.0.0
@@ -26,6 +26,8 @@ Read more about pre-release versioning behavior for extensions in the
 - Server parameters multi-select dropdowns now correctly display and match selected values, including case-insensitive comparison against server-returned values
 - Docker container creation now validates that a password is provided before starting the container, preventing post-start connection failures
 - IntelliSense completions no longer fail to refresh for partitioned tables
+- JSON Schema `$ref` resolution warning no longer appears when opening JSON files ([#223](https://github.com/microsoft/vscode-pgsql/issues/223))
+- Tool-initiated transactions are rolled back automatically on failure, eliminating the need to manually issue ROLLBACK after a query error ([#166](https://github.com/microsoft/vscode-pgsql/issues/166))
 
 ## [1.16.0] - 2026-01-30
 
