@@ -6,6 +6,45 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.19.0] - 2026-03-27
+
+### Added
+
+- **Azure HorizonDB Provisioning** — Create and configure Azure HorizonDB clusters directly from the extension, without switching to the Azure Portal.
+- **Server Restore / Clone** — Restore or clone Azure Database for PostgreSQL Flexible Server instances from the server dashboard.
+- **Deep Object Explorer Refresh** — Refreshing a node in the Object Explorer now performs a deep refresh of its subtree without collapsing the rest of the tree.
+- **Apache AGE Graph Visualization Improvements** — Improved layout, controls, and usability of the Apache AGE graph visualization panel.
+- **Copilot SQL Auto-Attach** — Added an auto-attach setting to automatically attach SQL context to Copilot conversations. Improved modal prompt and tool guidance for SQL attach workflows. ([#233](https://github.com/microsoft/vscode-pgsql/issues/233))
+- **Smarter Query Plan Copilot Recommendations** — Copilot analysis of query plans now uses a verification protocol for more reliable and actionable optimization suggestions. ([#234](https://github.com/microsoft/vscode-pgsql/issues/234))
+- **Static Query Plan Summarization** — Query plans can now include static summarization to surface high-level plan characteristics without a full Copilot analysis.
+- **Multi-Source Connection Settings** — Connection profiles are now fully settings source-aware. The extension correctly reads from and writes back to the originating settings scope (user, workspace, or folder). Editing a workspace-defined connection no longer silently overwrites global user settings. A scope selector lets you explicitly choose where a new connection profile is saved, and duplicate profiles across scopes are automatically deduplicated. ([#191](https://github.com/microsoft/vscode-pgsql/issues/191), [#133](https://github.com/microsoft/vscode-pgsql/issues/133), [#221](https://github.com/microsoft/vscode-pgsql/issues/221))
+
+### Fixed
+
+- `DROP FUNCTION` script generation produced malformed SQL in some cases ([#236](https://github.com/microsoft/vscode-pgsql/issues/236))
+- Foreign tables did not appear in IntelliSense completions ([#197](https://github.com/microsoft/vscode-pgsql/issues/197))
+- "Script as Create" on a materialized view always generated the DDL for the first materialized view in the schema, regardless of which object was selected ([#237](https://github.com/microsoft/vscode-pgsql/issues/237))
+- `START TRANSACTION` was executed incorrectly, causing unexpected transaction state ([#229](https://github.com/microsoft/vscode-pgsql/issues/229))
+- DDL generation for objects using built-in trigger functions (e.g. `tsvector_update_trigger`) produced unquoted arguments ([#227](https://github.com/microsoft/vscode-pgsql/issues/227))
+- Exporting query results as JSON double-encoded JSON/JSONB column values ([#235](https://github.com/microsoft/vscode-pgsql/issues/235))
+- "Enable richer experiences" command was missing from the Command Palette; disambiguated palette labels for related commands ([#232](https://github.com/microsoft/vscode-pgsql/issues/232))
+- Query Plan Visualization search telemetry was inflated due to a counting bug; stabilized Copilot context across plan views
+- Schema visualizer legend now uses less vertical screen space
+- `pgsql_query_plan` MCP tool `filterType` parameter was not correctly applied in some cases
+- Metrics group API validation and pagination handled edge cases incorrectly in some configurations
+
+## [1.18.1, 1.18.2] - 2026-03-15
+
+### Fixed
+
+- [Schema Migrations] Hotfix patches addressing schema migration issues
+
+## [1.18.0] - 2026-02-27
+
+Stable release.
+
+This is the stable release of the features introduced in `1.17.0`. There are no changes since `1.17.0`, but `1.18.0` marks these features as stable for all users.
+
 ## [1.17.0] - 2026-02-26
 
 ### Added
