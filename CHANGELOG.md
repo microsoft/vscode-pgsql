@@ -1,4 +1,4 @@
-# Changelog
+-# Changelog
 
 Following VS Code guidance, the PostgreSQL extension uses **odd** minor version numbers for
 pre-releases and **even** minor version numbers for stable releases.
@@ -28,10 +28,9 @@ Read more about pre-release versioning behavior for extensions in the
 - DDL generation for objects using built-in trigger functions (e.g. `tsvector_update_trigger`) produced unquoted arguments ([#227](https://github.com/microsoft/vscode-pgsql/issues/227))
 - Exporting query results as JSON double-encoded JSON/JSONB column values ([#235](https://github.com/microsoft/vscode-pgsql/issues/235))
 - "Enable richer experiences" command was missing from the Command Palette; disambiguated palette labels for related commands ([#232](https://github.com/microsoft/vscode-pgsql/issues/232))
-- Query Plan Visualization search telemetry was inflated due to a counting bug; stabilized Copilot context across plan views
+- `pgsql_query_plan` MCP tool `filterType` parameter was not correctly applied in some cases ([233](https://github.com/microsoft/vscode-pgsql/issues/233))
 - Schema visualizer legend now uses less vertical screen space
-- `pgsql_query_plan` MCP tool `filterType` parameter was not correctly applied in some cases
-- Metrics group API validation and pagination handled edge cases incorrectly in some configurations
+
 
 ## [1.18.1, 1.18.2] - 2026-03-15
 
