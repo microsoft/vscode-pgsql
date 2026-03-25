@@ -11,13 +11,13 @@ Read more about pre-release versioning behavior for extensions in the
 ### Added
 
 - **Azure HorizonDB Provisioning** — Create and configure Azure HorizonDB clusters directly from the extension, without switching to the Azure Portal.
-- **Server Restore / Clone** — Restore or clone Azure Database for PostgreSQL Flexible Server instances from the server dashboard.
-- **Deep Object Explorer Refresh** — Refreshing a node in the Object Explorer now performs a deep refresh of its subtree without collapsing the rest of the tree.
+- **Server Restore / Clone** — Restore or clone Azure Database for PostgreSQL Flexible Server instances directly from the server dashboard. Choose a full backup or a specific point-in-time to recover from, and spin up a new server without leaving VS Code.
+- **Improved Object Explorer Refresh** — Refreshing a node now reliably picks up all additions and removals throughout its entire subtree, so new database objects appear and deleted ones disappear without needing to disconnect and reconnect. ([#64](https://github.com/microsoft/vscode-pgsql/issues/64), [#152](https://github.com/microsoft/vscode-pgsql/issues/152), [#199](https://github.com/microsoft/vscode-pgsql/issues/199))
+- **Multi-Source Connection Settings** — Connection profiles can now be saved to your user settings, workspace, or folder. Save a profile to your workspace settings to check it into source control alongside your code — giving every team member the right database connections whenever they open the project. A scope selector makes it clear where each new profile will be saved, and duplicate profiles across scopes are automatically removed. ([#191](https://github.com/microsoft/vscode-pgsql/issues/191), [#133](https://github.com/microsoft/vscode-pgsql/issues/133), [#221](https://github.com/microsoft/vscode-pgsql/issues/221))
 - **Apache AGE Graph Visualization Improvements** — Improved layout, controls, and usability of the Apache AGE graph visualization panel.
 - **Copilot SQL Auto-Attach** — Added an auto-attach setting to automatically attach SQL context to Copilot conversations. Improved modal prompt and tool guidance for SQL attach workflows. ([#233](https://github.com/microsoft/vscode-pgsql/issues/233))
 - **Smarter Query Plan Copilot Recommendations** — Copilot analysis of query plans now uses a verification protocol for more reliable and actionable optimization suggestions. ([#234](https://github.com/microsoft/vscode-pgsql/issues/234))
 - **Static Query Plan Summarization** — Query plans can now include static summarization to surface high-level plan characteristics without a full Copilot analysis.
-- **Multi-Source Connection Settings** — Connection profiles are now fully settings source-aware. The extension correctly reads from and writes back to the originating settings scope (user, workspace, or folder). Editing a workspace-defined connection no longer silently overwrites global user settings. A scope selector lets you explicitly choose where a new connection profile is saved, and duplicate profiles across scopes are automatically deduplicated. ([#191](https://github.com/microsoft/vscode-pgsql/issues/191), [#133](https://github.com/microsoft/vscode-pgsql/issues/133), [#221](https://github.com/microsoft/vscode-pgsql/issues/221))
 
 ### Fixed
 
