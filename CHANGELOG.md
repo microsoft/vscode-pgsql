@@ -29,6 +29,7 @@ Read more about pre-release versioning behavior for extensions in the
 - Exporting query results as JSON double-encoded JSON/JSONB column values ([#235](https://github.com/microsoft/vscode-pgsql/issues/235))
 - "Enable richer experiences" command was missing from the Command Palette; disambiguated palette labels for related commands ([#232](https://github.com/microsoft/vscode-pgsql/issues/232))
 - `pgsql_query_plan` MCP tool `filterType` parameter was not correctly applied in some cases ([233](https://github.com/microsoft/vscode-pgsql/issues/233))
+- Connecting via a SQL file before opening the PostgreSQL panel could leave Object Explorer showing only the active server; saved connections are now correctly restored in this path ([#242](https://github.com/microsoft/vscode-pgsql/issues/242))
 - Schema visualizer legend now uses less vertical screen space
 
 
