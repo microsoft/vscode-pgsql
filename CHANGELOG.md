@@ -1,10 +1,49 @@
-# Changelog
+-# Changelog
 
 Following VS Code guidance, the PostgreSQL extension uses **odd** minor version numbers for
 pre-releases and **even** minor version numbers for stable releases.
 
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
+
+## [1.19.0] - 2026-03-27
+
+### Added
+
+- **Azure HorizonDB Provisioning** — Create and configure Azure HorizonDB clusters directly from the extension, without switching to the Azure Portal. HorizonDB is currently in Private Preview, learn more [here](https://azure.microsoft.com/en-us/products/horizondb).
+- **Server Restore / Clone** — Restore or clone Azure Database for PostgreSQL Flexible Server instances directly from the server dashboard. Choose a full backup or a specific point-in-time to recover from, and spin up a new server without leaving VS Code.
+- **Improved Object Explorer Refresh** — Refreshing a node now reliably picks up all additions and removals throughout its entire subtree, so new database objects appear and deleted ones disappear without needing to disconnect and reconnect. ([#64](https://github.com/microsoft/vscode-pgsql/issues/64), [#152](https://github.com/microsoft/vscode-pgsql/issues/152), [#199](https://github.com/microsoft/vscode-pgsql/issues/199))
+- **Multi-Source Connection Settings** — Connection profiles can now be saved to your user settings, workspace, or folder. Save a profile to your workspace settings to check it into source control alongside your code — giving every team member the right database connections whenever they open the project. A scope selector makes it clear where each new profile will be saved, and duplicate profiles across scopes are automatically removed. ([#191](https://github.com/microsoft/vscode-pgsql/issues/191), [#133](https://github.com/microsoft/vscode-pgsql/issues/133), [#221](https://github.com/microsoft/vscode-pgsql/issues/221))
+- **Apache AGE Graph Visualization Improvements** — Improved layout, controls, and usability of the Apache AGE graph visualization panel.
+- **Copilot SQL Auto-Attach** — Added an auto-attach setting to automatically attach SQL context to Copilot conversations. Improved modal prompt and tool guidance for SQL attach workflows. ([#233](https://github.com/microsoft/vscode-pgsql/issues/233))
+- **Smarter Query Plan Copilot Recommendations** — Copilot analysis of query plans now uses a verification protocol for more reliable and actionable optimization suggestions. ([#234](https://github.com/microsoft/vscode-pgsql/issues/234))
+- **Static Query Plan Summarization** — Query plans can now include static summarization to surface high-level plan characteristics without a full Copilot analysis.
+
+### Fixed
+
+- `DROP FUNCTION` script generation produced malformed SQL in some cases ([#236](https://github.com/microsoft/vscode-pgsql/issues/236))
+- Foreign tables did not appear in IntelliSense completions ([#197](https://github.com/microsoft/vscode-pgsql/issues/197))
+- "Script as Create" on a materialized view always generated the DDL for the first materialized view in the schema, regardless of which object was selected ([#237](https://github.com/microsoft/vscode-pgsql/issues/237))
+- `START TRANSACTION` was executed incorrectly, causing unexpected transaction state ([#229](https://github.com/microsoft/vscode-pgsql/issues/229))
+- DDL generation for objects using built-in trigger functions (e.g. `tsvector_update_trigger`) produced unquoted arguments ([#227](https://github.com/microsoft/vscode-pgsql/issues/227))
+- Exporting query results as JSON double-encoded JSON/JSONB column values ([#235](https://github.com/microsoft/vscode-pgsql/issues/235))
+- "Enable richer experiences" command was missing from the Command Palette; disambiguated palette labels for related commands ([#232](https://github.com/microsoft/vscode-pgsql/issues/232))
+- `pgsql_query_plan` MCP tool `filterType` parameter was not correctly applied in some cases ([233](https://github.com/microsoft/vscode-pgsql/issues/233))
+- Connecting via a SQL file before opening the PostgreSQL panel could leave Object Explorer showing only the active server; saved connections are now correctly restored in this path ([#242](https://github.com/microsoft/vscode-pgsql/issues/242))
+- Schema visualizer legend now uses less vertical screen space
+
+
+## [1.18.1, 1.18.2] - 2026-03-15
+
+### Fixed
+
+- [Schema Migrations] Hotfix patches addressing schema migration issues
+
+## [1.18.0] - 2026-02-27
+
+Stable release.
+
+This is the stable release of the features introduced in `1.17.0`. There are no changes since `1.17.0`, but `1.18.0` marks these features as stable for all users.
 
 ## [1.17.0] - 2026-02-26
 
