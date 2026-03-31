@@ -18,6 +18,7 @@ Read more about pre-release versioning behavior for extensions in the
 - **Copilot SQL Auto-Attach** — Added an auto-attach setting to automatically attach SQL context to Copilot conversations. Improved modal prompt and tool guidance for SQL attach workflows. ([#233](https://github.com/microsoft/vscode-pgsql/issues/233))
 - **Smarter Query Plan Copilot Recommendations** — Copilot analysis of query plans now uses a verification protocol for more reliable and actionable optimization suggestions. ([#234](https://github.com/microsoft/vscode-pgsql/issues/234))
 - **Static Query Plan Summarization** — Query plans can now include static summarization to surface high-level plan characteristics without a full Copilot analysis.
+- [Schema Migrations] Support for Microsoft Entra Authentication for Azure OpenAI Endpoint.
 
 ### Fixed
 
