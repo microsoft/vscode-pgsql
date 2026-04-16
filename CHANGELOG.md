@@ -1,10 +1,30 @@
--# Changelog
+# Changelog
 
 Following VS Code guidance, the PostgreSQL extension uses **odd** minor version numbers for
 pre-releases and **even** minor version numbers for stable releases.
 
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
+
+## [1.21.0] - 2026-04-16
+
+### Added
+
+- **Schema-Aware "New Query"** — Right-click a schema in Object Explorer to open a new query with the appropriate `search_path` already set, so unqualified object references resolve inside that schema without manual setup.
+([#238](https://github.com/microsoft/vscode-pgsql/issues/238))
+- **PostgreSQL Query Plan Node Icons** — The Query Plan Visualizer now uses PostgreSQL-specific node-type icons across all views (graph, icicle, table, and source) so scan, join, and aggregate nodes are easier to identify at a glance.
+- **Editor Coordination with the MSSQL Extension** — When both the PostgreSQL and MSSQL extensions are installed, editor ownership is now negotiated between the two, reducing duplicate toolbar actions and conflicting query execution behavior in shared editors.
+([#20](https://github.com/microsoft/vscode-pgsql/issues/20), [#67](https://github.com/microsoft/vscode-pgsql/issues/67), [#118](https://github.com/microsoft/vscode-pgsql/issues/118), [#147](https://github.com/microsoft/vscode-pgsql/issues/147))
+- **More Reliable Object Explorer** — The Object Explorer runtime has been refactored for more consistent refresh, expansion, and reconnection behavior, especially across long-running sessions and many-schema databases.
+- **IntelliSense Respects `search_path`** — Completions now honor the `search_path` supplied in connection options, so unqualified names suggest objects from the expected schemas first.
+
+### Fixed
+
+- Object scripting for partitioned tables now emits the correct `PARTITION BY` clause and partition definitions instead of falling back to the default storage form. ([#27](https://github.com/microsoft/vscode-pgsql/issues/27))
+- Port values in connection profiles are now normalized to a string, eliminating cases where a numeric port caused PGTS to reject `workspace/didChangeConfiguration` and where removing a port left an empty-string value in settings.
+- Clone / Restore server name is now validated for required length on the initial render, so invalid names surface immediately instead of at submit.
+- Fixed a hang during Docker container creation caused by a task-wrapper race condition.
+- Fixed a spurious warning emitted while unpacking the tools service bundle on first run.
 
 ## [1.20.0] - 2026-03-31
 
