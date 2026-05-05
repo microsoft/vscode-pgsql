@@ -10,6 +10,7 @@ Read more about pre-release versioning behavior for extensions in the
 
 ### Added
 
+- **Performance Dashboard** — Investigate database performance from the Server Dashboard with DB load charts, query activity, wait-event analysis, session health, blocking chains, shared time controls, and Azure-aware metrics.
 - **Object Properties** — Inspect DDL and security details, including grants and row-level security policies, across all database object types from Object Explorer.
 - **Schema-Aware "New Query"** — Right-click a schema in Object Explorer to open a new query with the appropriate `search_path` already set, so unqualified object references resolve inside that schema without manual setup.
 ([#238](https://github.com/microsoft/vscode-pgsql/issues/238))
