@@ -18,6 +18,9 @@ Read more about pre-release versioning behavior for extensions in the
 ([#20](https://github.com/microsoft/vscode-pgsql/issues/20), [#67](https://github.com/microsoft/vscode-pgsql/issues/67), [#118](https://github.com/microsoft/vscode-pgsql/issues/118), [#147](https://github.com/microsoft/vscode-pgsql/issues/147))
 - **IntelliSense Respects `search_path`** — Completions now honor the `search_path` supplied in connection options, so unqualified names suggest objects from the expected schemas first.
 - **Horizon AI Model Management** — Enable AI Model Management when creating Horizon DB resources.
+- **[Schema Migrations]** — New enhanced conversion engine offering better DDL conversions at lesser cost & lesser time.
+- **[Schema Migrations]** — Dynamic adaptability of conversion speed based on LLM model TPM quota.
+- **[Schema Migrations]** — Condensed view of post-conversion "Review tasks" using grouping & categorization to reduce manual effort.
 
 ### Changed
 
