@@ -6,25 +6,30 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
-## [1.21.0] - 2026-04-16
+## [1.21.0, 1.21.1, 1.21.2] - 2026-05-05
 
 ### Added
 
+- **Object Properties** — Inspect DDL and security details, including grants and row-level security policies, across all database object types from Object Explorer.
 - **Schema-Aware "New Query"** — Right-click a schema in Object Explorer to open a new query with the appropriate `search_path` already set, so unqualified object references resolve inside that schema without manual setup.
 ([#238](https://github.com/microsoft/vscode-pgsql/issues/238))
 - **PostgreSQL Query Plan Node Icons** — The Query Plan Visualizer now uses PostgreSQL-specific node-type icons across all views (graph, icicle, table, and source) so scan, join, and aggregate nodes are easier to identify at a glance.
 - **Editor Coordination with the MSSQL Extension** — When both the PostgreSQL and MSSQL extensions are installed, editor ownership is now negotiated between the two, reducing duplicate toolbar actions and conflicting query execution behavior in shared editors.
 ([#20](https://github.com/microsoft/vscode-pgsql/issues/20), [#67](https://github.com/microsoft/vscode-pgsql/issues/67), [#118](https://github.com/microsoft/vscode-pgsql/issues/118), [#147](https://github.com/microsoft/vscode-pgsql/issues/147))
-- **More Reliable Object Explorer** — The Object Explorer runtime has been refactored for more consistent refresh, expansion, and reconnection behavior, especially across long-running sessions and many-schema databases.
 - **IntelliSense Respects `search_path`** — Completions now honor the `search_path` supplied in connection options, so unqualified names suggest objects from the expected schemas first.
+- **Horizon AI Model Management** — Enable AI Model Management when creating Horizon DB resources.
+
+### Changed
+
+- The `@pgsql` chat participant is no longer automatically prompted by product entry points and is planned for future deprecation in favor of Agent Mode and MCP tools.
 
 ### Fixed
 
 - Object scripting for partitioned tables now emits the correct `PARTITION BY` clause and partition definitions instead of falling back to the default storage form. ([#27](https://github.com/microsoft/vscode-pgsql/issues/27))
-- Port values in connection profiles are now normalized to a string, eliminating cases where a numeric port caused PGTS to reject `workspace/didChangeConfiguration` and where removing a port left an empty-string value in settings.
-- Clone / Restore server name is now validated for required length on the initial render, so invalid names surface immediately instead of at submit.
-- Fixed a hang during Docker container creation caused by a task-wrapper race condition.
-- Fixed a spurious warning emitted while unpacking the tools service bundle on first run.
+- `Script as Create` now includes generated column definitions such as `GENERATED ALWAYS AS (...) STORED`. ([#248](https://github.com/microsoft/vscode-pgsql/issues/248))
+- Deep refresh now recovers when the selected Object Explorer item has already been deleted, instead of failing with an index error. ([#250](https://github.com/microsoft/vscode-pgsql/issues/250))
+- Query execution now works for SQL files whose paths contain spaces, percent signs, brackets, backticks, or encoded path segments.
+- Fixed a hang during Docker container creation caused by a task-wrapper race condition. ([#252](https://github.com/microsoft/vscode-pgsql/issues/252))
 
 ## [1.20.0] - 2026-03-31
 
