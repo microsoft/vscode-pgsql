@@ -35,6 +35,12 @@ Read more about pre-release versioning behavior for extensions in the
 - Query execution now works for SQL files whose paths contain spaces, percent signs, brackets, backticks, or encoded path segments.
 - Fixed a hang during Docker container creation caused by a task-wrapper race condition. ([#252](https://github.com/microsoft/vscode-pgsql/issues/252))
 
+## [1.20.1] - 2026-05-05
+
+### Fixed
+
+- "Analyze with Copilot" from Dashboard Metrics now passes the correct context to the tool, resolving errors that previously occurred during execution.
+
 ## [1.20.0] - 2026-03-31
 
 Stable release.
