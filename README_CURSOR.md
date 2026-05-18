@@ -1,6 +1,6 @@
 # PostgreSQL for Cursor
 
-![PostgreSQL for Cursor](img/intro-schema-agent-vid.gif)
+![PostgreSQL for Cursor](img/cursor/intro.png)
 
 PostgreSQL for Cursor is the essential extension for working with PostgreSQL databases - locally or in the cloud. Connect, query, build, and chat with your databases with ease, including seamless Entra authentication for Azure Database for PostgreSQL. The extension integrates directly with Cursor's built-in AI so you can explore schemas, write queries, and automate database workflows without leaving the editor.
 
@@ -27,23 +27,15 @@ Below are some of the key features of the PostgreSQL extension:
 
 Connect to any PostgreSQL database.
 
-![Connect to PostgreSQL](img/connect-local-vid.gif)
-
 Browse Azure to easily find and connect to your Azure Database for PostgreSQL servers with either password or Entra authentication.
-
-![Connect to Azure PostgreSQL](img/connect-azure-vid.gif)
 
 ### Explore your database
 
 Easily explore your database objects, including tables, views, functions, and more.
 
-![Explore your database](img/object-explorer-vid.gif)
-
 ### Schema Visualization
 
 Visualize your database schemas quickly in Cursor.
-
-![Schema Visualization](img/schema-viz-vid.gif)
 
 ### Query Plan Visualization
 
@@ -61,13 +53,9 @@ Run Apache AGE Cypher queries and explore the results as an interactive node-edg
 
 Chat with your database using Cursor's built-in AI. Right-click a database in the Object Explorer and select **Connect AI** to start an Agent mode session with that database already in scope — no extra subscription or sign-in is required beyond Cursor itself.
 
-![Cursor AI integration](img/copilot-ask-pgsql-vid.gif)
-
 ### Agent Mode Tools
 
 Supercharge your workflow with Cursor Agent Mode tools, which let the AI run SQL queries, create tables, design schemas, import CSV files, and more.
-
-![Agent Mode Tools](img/agent-mode-vid.gif)
 
 ### MCP server (pgsql-mcp)
 
@@ -77,13 +65,9 @@ The extension automatically registers a Model Context Protocol (MCP) server in C
 
 Get insights into your PostgreSQL server performance with the Server Dashboard.
 
-![Server Dashboard](img/metrics-dashboard.gif)
-
 ### Metrics Intelligence with Cursor AI
 
 Get intelligent insights and help with performance and troubleshooting your PostgreSQL database with Cursor AI.
-
-![Metrics Intelligence](img/metrics-copilot.gif)
 
 ### Create an Azure Database for PostgreSQL
 
