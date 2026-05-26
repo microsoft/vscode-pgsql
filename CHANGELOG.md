@@ -6,12 +6,13 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
-## [1.23.0] - 2026-05-18
+## [1.23.0 - 1.23.6] - 2026-05-26
 
 ### Added
 
 - **AWS RDS IAM Authentication** — Connect to Amazon RDS and Aurora PostgreSQL databases using AWS RDS IAM credentials, with AWS profile and region support plus automatic credential refresh before signed tokens expire. ([#211](https://github.com/microsoft/vscode-pgsql/issues/211), [#219](https://github.com/microsoft/vscode-pgsql/issues/219))
 - **Horizon DB Network Settings** — Open Horizon DB network configuration from the server dashboard to manage firewall access from within the extension.
+- **HorizonDB Azure browse and metadata support** — Browse HorizonDB clusters from the Azure connection flow. Allow fetching Azure metadata for manually entered HorizonDB hosts so dashboard Azure-management features recognize those connections.
 - **Agent Mode Database Tools** — The bundled tools service now exposes additional DBAgent MCP tools through the PostgreSQL MCP server, giving AI assistants richer database-analysis and instruction-management capabilities.
 - **[Schema Migrations]** — The migration setup experience now includes GA-ready UI updates, Azure Database for PostgreSQL scratch database wording, Microsoft Foundry model configuration labels, and restored enhanced-conversion engine controls.
 - **[Schema Migrations]** — The scratch database step can verify recommended Azure Database for PostgreSQL extensions and show any missing extensions inline before schema conversion starts.
@@ -24,6 +25,7 @@ Read more about pre-release versioning behavior for extensions in the
 - Connection timeout failures now show clearer, consistent guidance across the connection dialog, Object Explorer, and post-connect notifications.
 - Horizon DB creation failures now distinguish total deployment failures from partial follow-up failures, with raw Azure deployment details available for troubleshooting.
 - Dashboard AI actions now use the correct Copilot or AI wording and launch chat correctly in Cursor.
+- Saved Query History entries can now execute after the original query editor has been closed.
 - Server-management actions are now gated by Azure PostgreSQL platform so unsupported management surfaces are not shown for the wrong server type.
 - **[Schema Migrations]** Scratch database extension verification now handles databases where none of the recommended extensions are installed, and changing the PostgreSQL connection no longer triggers stale verification against the previous database.
 - **[Schema Migrations]** Review task pending badges and focus indicators now meet accessibility contrast requirements.
