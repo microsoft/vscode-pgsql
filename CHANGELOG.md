@@ -27,6 +27,9 @@ Read more about pre-release versioning behavior for extensions in the
 - Dashboard AI actions now use the correct Copilot or AI wording and launch chat correctly in Cursor.
 - Saved Query History entries can now execute after the original query editor has been closed.
 - Server-management actions are now gated by Azure PostgreSQL platform so unsupported management surfaces are not shown for the wrong server type.
+- **[Schema Migrations]** — Oracle to Azure Database for PostgreSQL migration tooling is now generally available.
+- **[Schema Migrations]** — Refined project layout, provides easier understanding and navigation
+- **[Schema Migrations]** — Improvements in object conversion quality and more detailed reporting.
 - **[Schema Migrations]** Scratch database extension verification now handles databases where none of the recommended extensions are installed, and changing the PostgreSQL connection no longer triggers stale verification against the previous database.
 - **[Schema Migrations]** Review task pending badges and focus indicators now meet accessibility contrast requirements.
 
