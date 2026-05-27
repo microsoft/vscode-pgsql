@@ -11,11 +11,16 @@ Read more about pre-release versioning behavior for extensions in the
 ### Added
 
 - **AWS RDS IAM Authentication** — Connect to Amazon RDS and Aurora PostgreSQL databases using AWS RDS IAM credentials, with AWS profile and region support plus automatic credential refresh before signed tokens expire. ([#211](https://github.com/microsoft/vscode-pgsql/issues/211), [#219](https://github.com/microsoft/vscode-pgsql/issues/219))
+- **Visualize Durable Workflows and AI Pipelines** - (Preview) Support run and definition visualizations for `pg_durable` and `azure_ai.pipelines` created workflows. See the steps, failures, and timings.
 - **Horizon DB Network Settings** — Open Horizon DB network configuration from the server dashboard to manage firewall access from within the extension.
 - **HorizonDB Azure browse and metadata support** — Browse HorizonDB clusters from the Azure connection flow. Allow fetching Azure metadata for manually entered HorizonDB hosts so dashboard Azure-management features recognize those connections.
 - **Agent Mode Database Tools** — The bundled tools service now exposes additional DBAgent MCP tools through the PostgreSQL MCP server, giving AI assistants richer database-analysis and instruction-management capabilities.
 - **[Schema Migrations]** — The migration setup experience now includes GA-ready UI updates, Azure Database for PostgreSQL scratch database wording, Microsoft Foundry model configuration labels, and restored enhanced-conversion engine controls.
 - **[Schema Migrations]** — The scratch database step can verify recommended Azure Database for PostgreSQL extensions and show any missing extensions inline before schema conversion starts.
+
+### Changed
+
+- Removed AI Model Management interface from HorizonDB provisioning. Will re-enable when it enters Public Preview stage.
 
 ### Fixed
 
