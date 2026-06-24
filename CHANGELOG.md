@@ -6,6 +6,22 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.25.0 - 1.25.x] - 2026-06-DD
+
+### Added
+
+- **Edit Data** — Edit table rows directly in an editable grid: run the **Edit Data** command from a table’s context menu in Object Explorer, then change cell values, add and delete rows, and save changes back to the database without writing UPDATE/INSERT/DELETE statements by hand. ([#139](https://github.com/microsoft/vscode-pgsql/issues/139))
+- **Query Placeholders with Parameter Binding** — Run parameterized queries with typed placeholders and bound parameter values, integrated with the Query Plan Visualizer and an opt-in consent prompt for saving query history. ([#117](https://github.com/microsoft/vscode-pgsql/issues/117))
+- **Activity Log in Server Management** — A new Activity Log pane in the server dashboard surfaces Azure control-plane operations for your server directly inside the extension.
+
+### Fixed
+
+- The query results tab now stays where you put it: re-running a query no longer forces the results pane back to the right of the editor, preserving a user-repositioned layout. ([#266](https://github.com/microsoft/vscode-pgsql/issues/266))
+- The Schema Designer header colors now meet WCAG AA contrast requirements. ([#269](https://github.com/microsoft/vscode-pgsql/issues/269))
+- The connection dialog no longer gets stuck in a stale-selection loop when browsing Azure resources.
+- Oracle-to-PostgreSQL migration projects now use the correct settings paths for multi-schema conversions.
+- Migration deployments now order triggers correctly when a trigger is bundled with its trigger function, so dependent objects deploy in the right order.
+
 ## [1.24.0] - 2026-06-01
 
 Stable release.
