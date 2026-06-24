@@ -20,7 +20,7 @@ Read more about pre-release versioning behavior for extensions in the
 - The Schema Designer header colors now meet WCAG AA contrast requirements. ([#269](https://github.com/microsoft/vscode-pgsql/issues/269))
 - The connection dialog no longer gets stuck in a stale-selection loop when browsing Azure resources.
 - Oracle-to-PostgreSQL migration projects now use the correct settings paths for multi-schema conversions.
-- Migration deployments now order triggers correctly when a trigger is bundled with its trigger function, so dependent objects deploy in the right order.
+- Viewing a database schema no longer crashes when the server has `standard_conforming_strings` turned off. ([#267](https://github.com/microsoft/vscode-pgsql/issues/267))
 
 ## [1.24.0] - 2026-06-01
 
