@@ -21,6 +21,13 @@ Read more about pre-release versioning behavior for extensions in the
 - The connection dialog no longer gets stuck in a stale-selection loop when browsing Azure resources.
 - Oracle-to-PostgreSQL migration projects now use the correct settings paths for multi-schema conversions.
 - Viewing a database schema no longer crashes when the server has `standard_conforming_strings` turned off. ([#267](https://github.com/microsoft/vscode-pgsql/issues/267))
+- [Schema Migrations] - Enable Object conversion that were marked as failed previously because of dependency on objects planned for future conversion and yet not converted.
+- [Schema Migrations] - Deploy.sql run issues related to ordering of converted objects. Objects are now stored in order so that deploy.sql run does not throw an error and fallback objects are recovered as successful, if they are compilable post conversion.
+- [Schema Migrations] - Consistent quoting of mixed-case relations and identifiers, pin session NLS formats so extracted DDL is deterministic regardless of server locale.
+- [Schema Migrations] - Hardens conversion when the LLM returns malformed or empty DDLs during conversion, clamps out-of-range Oracle sequence/identity bounds
+- [Schema Migrations] - Fix converson for JSON, REF CURSOR types & recover real object type for mis-typed relation dependencies.
+- [Schema Migrations] - Convert wrapped Oracle objects to correct compilable declaration.
+
 
 ## [1.24.0] - 2026-06-01
 
