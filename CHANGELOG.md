@@ -6,6 +6,29 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.25.0] - 2026-06-26
+
+### Added
+
+- **Edit Data** — Edit table rows directly in an editable grid: run the **Edit Data** command from a table’s context menu in Object Explorer, then change cell values, add and delete rows, and save changes back to the database without writing UPDATE/INSERT/DELETE statements by hand. ([#139](https://github.com/microsoft/vscode-pgsql/issues/139))
+- **Query Placeholders with Parameter Binding** — Run parameterized queries with typed placeholders and bound parameter values, integrated with the Query Plan Visualizer and an opt-in consent prompt for saving query history. ([#117](https://github.com/microsoft/vscode-pgsql/issues/117))
+- **Activity Log in Server Management** — A new Activity Log pane in the server dashboard surfaces Azure control-plane operations for your server directly inside the extension.
+
+### Fixed
+
+- The query results tab now stays where you put it: re-running a query no longer forces the results pane back to the right of the editor, preserving a user-repositioned layout. ([#266](https://github.com/microsoft/vscode-pgsql/issues/266))
+- The Schema Designer header colors now meet WCAG AA contrast requirements. ([#269](https://github.com/microsoft/vscode-pgsql/issues/269))
+- The connection dialog no longer gets stuck in a stale-selection loop when browsing Azure resources.
+- Oracle-to-PostgreSQL migration projects now use the correct settings paths for multi-schema conversions.
+- Viewing a database schema no longer crashes when the server has `standard_conforming_strings` turned off. ([#267](https://github.com/microsoft/vscode-pgsql/issues/267))
+- [Schema Migrations] - Enable Object conversion that were marked as failed previously because of dependency on objects planned for future conversion and yet not converted.
+- [Schema Migrations] - Deploy.sql run issues related to ordering of converted objects. Objects are now stored in order so that deploy.sql run does not throw an error and fallback objects are recovered as successful, if they are compilable post conversion.
+- [Schema Migrations] - Consistent quoting of mixed-case relations and identifiers, pin session NLS formats so extracted DDL is deterministic regardless of server locale.
+- [Schema Migrations] - Hardens conversion when the LLM returns malformed or empty DDLs during conversion, clamps out-of-range Oracle sequence/identity bounds
+- [Schema Migrations] - Fix converson for JSON, REF CURSOR types & recover real object type for mis-typed relation dependencies.
+- [Schema Migrations] - Convert wrapped Oracle objects to correct compilable declaration.
+
+
 ## [1.24.0] - 2026-06-01
 
 Stable release.
