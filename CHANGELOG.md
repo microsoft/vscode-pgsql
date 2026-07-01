@@ -6,7 +6,13 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
-## [1.25.0] - 2026-06-26
+## [1.26.0] - 2026-07-01
+
+Stable release.
+
+This is the stable release of the features introduced in `1.25.*`. There are no changes since `1.25.2`, but `1.26.0` marks these features as stable for all users.
+
+## [1.25.0 - 1.25.2] - 2026-06-26
 
 ### Added
 
