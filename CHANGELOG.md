@@ -6,6 +6,18 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.27.0] - 2026-07-15
+
+### Added
+
+- **Database Backup (Preview)** — Enable `pgsql.enablePgDumpRestoreUI`, then choose **Backup...** from a server or database in Object Explorer to create a `pg_dump` backup. Configure the output format, schema/data scope, object filters, compression, parallel jobs, and advanced options, then monitor or cancel the backup from VS Code.
+- **Azure Database for PostgreSQL Elastic Clusters** — Provision Elastic Cluster (Citus) deployments with a configurable node count. Object Explorer now identifies distributed, reference, local, and distributed-schema tables with distinct icons and labels.
+
+### Fixed
+
+- Edit Data now defaults to stable key-column ordering when no explicit sort is selected.
+- Expired Microsoft Entra tokens no longer start duplicate reconnects or cause stuck connection progress, broad pool-timeout warnings, and Object Explorer disconnects during metadata refresh.
+
 ## [1.26.0] - 2026-07-01
 
 Stable release.
