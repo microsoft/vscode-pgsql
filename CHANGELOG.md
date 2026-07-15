@@ -12,11 +12,16 @@ Read more about pre-release versioning behavior for extensions in the
 
 - **Database Backup (Preview)** — Enable `pgsql.enablePgDumpRestoreUI`, then choose **Backup...** from a server or database in Object Explorer to create a `pg_dump` backup. Configure the output format, schema/data scope, object filters, compression, parallel jobs, and advanced options, then monitor or cancel the backup from VS Code.
 - **Azure Database for PostgreSQL Elastic Clusters** — Provision Elastic Cluster (Citus) deployments with a configurable node count. Object Explorer now identifies distributed, reference, local, and distributed-schema tables with distinct icons and labels.
+- **[Schema Migrations]** - Use plpgsql_check extension for better conversion of programmable objects.
+- **[Schema Migrations]** - Use Azure HorizonDB as target.
 
 ### Fixed
 
 - Edit Data now defaults to stable key-column ordering when no explicit sort is selected.
 - Expired Microsoft Entra tokens no longer start duplicate reconnects or cause stuck connection progress, broad pool-timeout warnings, and Object Explorer disconnects during metadata refresh.
+- [Schema Migrations] - Support conversion for wrapped Oracle objects, hierarchical queries.
+- [Schema Migrations] - Package performance optimization, handle large packages.
+- [Schema Migrations] - Fixes for better conversion of dblinks, views, materialized views & ref constraints.
 
 ## [1.26.0] - 2026-07-01
 
