@@ -15,6 +15,13 @@ The extension is supported on the following operating systems:
 - **Linux**: x64 and ARM64 (requires glibc 2.35+)
 - **macOS**: macOS 13+
 
+## IDE Compatibility
+
+This release is published for and officially supported on Cursor. Other VS Code forks can install and use it as well, although feature availability depends on the APIs provided by each IDE.
+
+- **MCP server integration:** The IDE must provide an MCP registration API for extensions. Cursor and Visual Studio Code provide this API. IDEs that do not, including Antigravity and Kiro, cannot use the MCP server. Other extension features, such as connections and queries, should continue to work.
+- **code-server:** code-server uses Open VSX as its extension marketplace, so the extension appears with Cursor branding. This is expected. code-server is not officially supported, but the extension should work there.
+
 ## About This Repository
 
 This repository does not contain the source code for the PostgreSQL extension, which is not [open source]. Instead, this repository serves as a hub for [issue tracking], documentation, and community feedback.
