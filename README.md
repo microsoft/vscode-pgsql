@@ -49,6 +49,8 @@ Visualize your database schemas quickly in VS Code.
 
 Explore PostgreSQL EXPLAIN output in four synchronized views: an interactive node graph showing operator relationships, an icicle chart for identifying hotspots, a sortable table for comparing nodes, and a raw source view with Monaco Editor support. Color-coded severity groups highlight performance bottlenecks, and GitHub Copilot integration provides AI-assisted analysis and optimization guidance. Launch the visualizer from the query editor toolbar, the Query Results panel, or the Command Palette.
 
+![Query Plan Visualization](img/query-plan-visual-vid.gif)
+
 ### Object Explorer Search
 
 Search for database objects by name across connections, databases, and schemas — without manually expanding the Object Explorer tree. Filter by object type (tables, views, functions, sequences, and more) and schema, then click any result to navigate directly to it in the tree. Launch search from the Object Explorer toolbar or by right-clicking any server, database, or schema node.
