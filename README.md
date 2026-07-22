@@ -61,6 +61,8 @@ Search for database objects by name across connections, databases, and schemas â
 
 Run Apache AGE Cypher queries and explore the results as an interactive node-edge graph. The extension automatically detects graph query results and renders them in a visual explorer with per-node callouts, zoom and pan controls, export support, and theme-aware styling.
 
+![Apache AGE Graph Visualization](img/apache-age-graph-vid.gif)
+
 ### Copilot @pgsql agent
 
 Chat with your database using the @pgsql agent in Copilot 'Ask' mode. Requires GitHub Copilot.
