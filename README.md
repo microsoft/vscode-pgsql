@@ -91,6 +91,8 @@ Get intelligent insights and help with performance and troubleshooting your Post
 
 Create a new Azure Database for PostgreSQL Flexible Server or Azure HorizonDB cluster directly from VS Code with just a few clicks, without switching to the Azure Portal.
 
+![Create an Azure Database for PostgreSQL](img/create-new-server.gif)
+
 ### Manage Azure Database for PostgreSQL servers
 
 Manage your Azure Database for PostgreSQL servers, including starting, stopping, firewall rules, server parameters, and more. Restore or clone existing Flexible Server instances directly from the server dashboard.
