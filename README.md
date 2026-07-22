@@ -101,6 +101,8 @@ Manage your Azure Database for PostgreSQL servers, including starting, stopping,
 
 Create a PostgreSQL database in a Docker container easily with a few clicks.
 
+![Create a docker PostgreSQL](img/docker-postgresql-vid.gif)
+
 ### Query
 
 Run queries in a connected, intellisense-enabled VS Code editor. Results are displayed in a grid view, and you can easily export the results to CSV, JSON, or Excel.
