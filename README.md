@@ -107,6 +107,8 @@ Create a PostgreSQL database in a Docker container easily with a few clicks.
 
 Run queries in a connected, intellisense-enabled VS Code editor. Results are displayed in a grid view, and you can easily export the results to CSV, JSON, or Excel.
 
+![Query](img/query-vid.gif)
+
 ### Run psql
 
 Quickly connect psql to any of your databases, including Azure Database for PostgreSQL with Entra authentication.
