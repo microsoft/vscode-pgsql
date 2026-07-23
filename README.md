@@ -97,6 +97,8 @@ Create a new Azure Database for PostgreSQL Flexible Server or Azure HorizonDB cl
 
 Manage your Azure Database for PostgreSQL servers, including starting, stopping, firewall rules, server parameters, and more. Restore or clone existing Flexible Server instances directly from the server dashboard.
 
+![Manage Azure Database for PostgreSQL servers](img/manage-azure-server-vid.gif)
+
 ### Create a docker PostgreSQL
 
 Create a PostgreSQL database in a Docker container easily with a few clicks.
