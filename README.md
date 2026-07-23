@@ -115,6 +115,8 @@ Run queries in a connected, intellisense-enabled VS Code editor. Results are dis
 
 Quickly connect psql to any of your databases, including Azure Database for PostgreSQL with Entra authentication.
 
+![Run psql](img/psql-connection-vid.gif)
+
 ## Oracle to Azure Database for PostgreSQL Schema and Application Conversion (Preview)
 
 The PostgreSQL extension now includes an intelligent schema conversion feature that helps you migrate Oracle database schemas to Azure Database for PostgreSQL. This AI-powered tool automatically converts Oracle schema objects—including tables, views, stored procedures, functions, and triggers—into PostgreSQL-compatible equivalents. The conversion process uses Azure OpenAI to understand complex Oracle constructs and transform them following PostgreSQL best practices, while validating all converted objects in a scratch database environment to ensure compatibility before deployment. When automatic conversion isn't possible for complex Oracle-specific features, the tool flags these items as Review Tasks that you can resolve with assistance from GitHub Copilot Agents.
