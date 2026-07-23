@@ -49,13 +49,19 @@ Visualize your database schemas quickly in VS Code.
 
 Explore PostgreSQL EXPLAIN output in four synchronized views: an interactive node graph showing operator relationships, an icicle chart for identifying hotspots, a sortable table for comparing nodes, and a raw source view with Monaco Editor support. Color-coded severity groups highlight performance bottlenecks, and GitHub Copilot integration provides AI-assisted analysis and optimization guidance. Launch the visualizer from the query editor toolbar, the Query Results panel, or the Command Palette.
 
+![Query Plan Visualization](img/query-plan-visual-vid.gif)
+
 ### Object Explorer Search
 
 Search for database objects by name across connections, databases, and schemas — without manually expanding the Object Explorer tree. Filter by object type (tables, views, functions, sequences, and more) and schema, then click any result to navigate directly to it in the tree. Launch search from the Object Explorer toolbar or by right-clicking any server, database, or schema node.
 
+![Object Explorer Search](img/object-explorer-search-vid.gif)
+
 ### Apache AGE Graph Visualization
 
 Run Apache AGE Cypher queries and explore the results as an interactive node-edge graph. The extension automatically detects graph query results and renders them in a visual explorer with per-node callouts, zoom and pan controls, export support, and theme-aware styling.
+
+![Apache AGE Graph Visualization](img/apache-age-graph-vid.gif)
 
 ### Copilot @pgsql agent
 
@@ -85,21 +91,31 @@ Get intelligent insights and help with performance and troubleshooting your Post
 
 Create a new Azure Database for PostgreSQL Flexible Server or Azure HorizonDB cluster directly from VS Code with just a few clicks, without switching to the Azure Portal.
 
+![Create an Azure Database for PostgreSQL](img/create-new-server.gif)
+
 ### Manage Azure Database for PostgreSQL servers
 
 Manage your Azure Database for PostgreSQL servers, including starting, stopping, firewall rules, server parameters, and more. Restore or clone existing Flexible Server instances directly from the server dashboard.
+
+![Manage Azure Database for PostgreSQL servers](img/manage-azure-server-vid.gif)
 
 ### Create a docker PostgreSQL
 
 Create a PostgreSQL database in a Docker container easily with a few clicks.
 
+![Create a docker PostgreSQL](img/docker-postgresql-vid.gif)
+
 ### Query
 
 Run queries in a connected, intellisense-enabled VS Code editor. Results are displayed in a grid view, and you can easily export the results to CSV, JSON, or Excel.
 
+![Query](img/query-vid.gif)
+
 ### Run psql
 
 Quickly connect psql to any of your databases, including Azure Database for PostgreSQL with Entra authentication.
+
+![Run psql](img/psql-connection-vid.gif)
 
 ## Oracle to Azure Database for PostgreSQL Schema and Application Conversion (Preview)
 
