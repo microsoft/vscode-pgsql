@@ -6,22 +6,28 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
-## [1.27.0] - 2026-07-15
+## [1.27.0 - 1.27.2] - 2026-07-15
 
 ### Added
 
-- **Database Backup (Preview)** — Enable `pgsql.enablePgDumpRestoreUI`, then choose **Backup...** from a server or database in Object Explorer to create a `pg_dump` backup. Configure the output format, schema/data scope, object filters, compression, parallel jobs, and advanced options, then monitor or cancel the backup from VS Code.
+- **Database Restore (Preview)** — Completes the backup/restore pair: with `pgsql.enablePgDumpRestoreUI` enabled, choose **Restore...** from a server or database in Object Explorer to restore from a backup file. Pick a target database and restore mode (full, schema-only, or data-only), preview the generated command, and watch live progress with the option to cancel. ([#257](https://github.com/microsoft/vscode-pgsql/issues/257))
+- **Get Started page** — After saving a new connection, a Get Started tab points you at your likely next step: open a new query, view the performance dashboard, browse features, or start an AI chat scoped to the selected database. Reopen it any time from Object Explorer, or turn the automatic prompt off from the page itself.
+- **Database Backup (Preview)** — Enable `pgsql.enablePgDumpRestoreUI`, then choose **Backup...** from a server or database in Object Explorer to create a `pg_dump` backup. Configure the output format, schema/data scope, object filters, compression, parallel jobs, and advanced options, then monitor or cancel the backup from VS Code. ([#257](https://github.com/microsoft/vscode-pgsql/issues/257))
 - **Azure Database for PostgreSQL Elastic Clusters** — Provision Elastic Cluster (Citus) deployments with a configurable node count. Object Explorer now identifies distributed, reference, local, and distributed-schema tables with distinct icons and labels.
+- **[Schema Migrations]** - Convert Oracle object types (`TYPE` and `TYPE BODY`) to PostgreSQL.
 - **[Schema Migrations]** - Use plpgsql_check extension for better conversion of programmable objects.
 - **[Schema Migrations]** - Use Azure HorizonDB as target.
 
 ### Fixed
 
+- Azure metadata requests now work correctly in the packaged extension, so Azure sign-in and resource browsing behave the same as in development builds.
 - Edit Data now defaults to stable key-column ordering when no explicit sort is selected.
 - Expired Microsoft Entra tokens no longer start duplicate reconnects or cause stuck connection progress, broad pool-timeout warnings, and Object Explorer disconnects during metadata refresh.
 - [Schema Migrations] - Support conversion for wrapped Oracle objects, hierarchical queries.
 - [Schema Migrations] - Package performance optimization, handle large packages.
 - [Schema Migrations] - Fixes for better conversion of dblinks, views, materialized views & ref constraints.
+- [Schema Migrations] - Generate deterministic schema-qualified `CREATE TABLE` statements and correctly link sequence ownership, including for trigger-emulated identity columns.
+- [Schema Migrations] - More reliable conversion of large packages, and more accurate package-member counts in conversion reports.
 
 ## [1.26.0] - 2026-07-01
 
