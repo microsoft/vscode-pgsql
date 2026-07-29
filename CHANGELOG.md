@@ -12,7 +12,7 @@ Stable release.
 
 This is the stable release of the features introduced in `1.27.*`.
 
-## [1.27.0 - 1.27.2] - 2026-07-15
+## [1.27.0 - 1.27.3] - 2026-07-15
 
 ### Added
 
@@ -26,6 +26,7 @@ This is the stable release of the features introduced in `1.27.*`.
 
 ### Fixed
 
+- Opening **Backup...** from a server connection that does not specify a database now resolves the live session database instead of treating the `<default>` display label as a database name. The backup form loads without blocking other Object Explorer operations.
 - Azure metadata requests now work correctly in the packaged extension, so Azure sign-in and resource browsing behave the same as in development builds.
 - Edit Data now defaults to stable key-column ordering when no explicit sort is selected.
 - Expired Microsoft Entra tokens no longer start duplicate reconnects or cause stuck connection progress, broad pool-timeout warnings, and Object Explorer disconnects during metadata refresh.
