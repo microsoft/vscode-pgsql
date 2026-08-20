@@ -6,6 +6,30 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.29.0] - 2026-08-19
+
+### Added
+
+- **Elastic Cluster management dashboard** — On an Azure Database for PostgreSQL elastic cluster, open the server dashboard to inspect worker-node topology, shard counts, reference tables, colocation groups, and CPU/disk usage without leaving VS Code.
+- **[Schema Migrations]** Review-task STATUS and STATE — The Grouped Action Items view now separates conversion outcome (STATUS) from deploy disposition (STATE), and groups items by those states so must-fix work is easier to scan.
+- **[Schema Migrations]** Surface customer obligations as Action Items, including autonomous transactions, database links, required extensions, and non-functional bodies.
+- **[Schema Migrations]** Add a customer object-mapping summary and cleaner conversion reports.
+- **[Schema Migrations]** Diagnose compile-barrier failures so dependency and compile findings are visible and actionable.
+- **[Schema Migrations]** Automatically recover failed conversion chunks when a later pass can salvage already-converted records.
+
+### Fixed
+
+- Query Plan Visualizer Buffer Hits now show exclusive/self values when **Self** is selected, and cumulative values for **Total**. ([#292](https://github.com/microsoft/vscode-pgsql/issues/292))
+- Azure Browse uses the server's real fully qualified domain name instead of synthesizing `*.postgres.database.azure.com`, so regional and custom Flexible Server endpoints can connect.
+- Azure Dashboard metadata discovery now validates Flexible Servers by ARM resource identity, so custom/regional hostnames still get Azure management features.
+- Unresolved Azure browse endpoints are no longer turned into guessed hostnames.
+- Oracle schema discovery in a migration project now reports the connection error instead of spinning on **Loading...** forever.
+- [Schema Migrations] Conversion completion and conversion success are now distinct, so a finished run with failed chunks is no longer shown as a clean success.
+- [Schema Migrations] Reject converted DDL that would execute nothing, and stop shipping broken identifiers or unparseable PL/pgSQL bodies.
+- [Schema Migrations] Preserve Oracle database-link atomicity instead of silently dropping those guarantees.
+- [Schema Migrations] A transient failure converting one package member no longer aborts the whole package.
+- [Schema Migrations] Deploy preparation now enforces roster coverage and can salvage converted records from failed chunks.
+
 ## [1.28.0] - 2026-07-30
 
 Stable release.
