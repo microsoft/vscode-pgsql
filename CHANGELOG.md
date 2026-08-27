@@ -6,7 +6,7 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
-## [1.29.0 - 1.29.1] - YYYY-MM-DD
+## [1.29.0 - 1.29.1] - 2026-08-27
 
 ### Added
 
