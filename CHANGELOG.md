@@ -6,12 +6,14 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
-## [1.29.0] - 2026-08-19
+## [1.29.0 - 1.29.1] - 2026-08-27
 
 ### Added
 
-- **Elastic Cluster management dashboard** — On an Azure Database for PostgreSQL elastic cluster, open the server dashboard to inspect worker-node topology, shard counts, reference tables, colocation groups, and CPU/disk usage without leaving VS Code.
-- **[Schema Migrations]** Review-task STATUS and STATE — The Grouped Action Items view now separates conversion outcome (STATUS) from deploy disposition (STATE), and groups items by those states so must-fix work is easier to scan.
+- **Elastic Cluster support** — Elastic clusters in Azure Database for PostgreSQL flexible server now have a dedicated management dashboard for connection endpoints and worker-node topology, Azure Monitor CPU and disk metrics, table distribution, shard placement and skew analysis, colocation groups, and reviewable SQL for table and shard operations. Object Explorer also identifies clusters with distinct connected and disconnected icons and highlights distribution-key columns, while Server Logs points to supported diagnostic alternatives when downloads are unavailable.
+- **Azure HorizonDB metrics** — Explore Azure Monitor-backed health and performance metrics, active sessions and wait activity, server details, and Query Store readiness guidance from the Server Dashboard.
+- **Customizable Performance Dashboard views** — Choose which charts, metric cards, tables, and trees appear on each dashboard tab, with selections saved independently for each connection.
+- **[Schema Migrations]** Review conversion work with a consistent Converted or Not-Converted status and `CVT-NNN` messages that explain the outcome and recommended action. The Grouped and Tasks tabs show the same Action Item population, keep package members together, and show full error details.
 - **[Schema Migrations]** Surface customer obligations as Action Items, including autonomous transactions, database links, required extensions, and non-functional bodies.
 - **[Schema Migrations]** Add a customer object-mapping summary and cleaner conversion reports.
 - **[Schema Migrations]** Diagnose compile-barrier failures so dependency and compile findings are visible and actionable.
@@ -23,12 +25,17 @@ Read more about pre-release versioning behavior for extensions in the
 - Azure Browse uses the server's real fully qualified domain name instead of synthesizing `*.postgres.database.azure.com`, so regional and custom Flexible Server endpoints can connect.
 - Azure Dashboard metadata discovery now validates Flexible Servers by ARM resource identity, so custom/regional hostnames still get Azure management features.
 - Unresolved Azure browse endpoints are no longer turned into guessed hostnames.
+- Concurrent Azure management operations now share an in-flight token request, preventing overlapping refreshes from leaving dashboard or Server Logs features stuck loading.
 - Oracle schema discovery in a migration project now reports the connection error instead of spinning on **Loading...** forever.
-- [Schema Migrations] Conversion completion and conversion success are now distinct, so a finished run with failed chunks is no longer shown as a clean success.
-- [Schema Migrations] Reject converted DDL that would execute nothing, and stop shipping broken identifiers or unparseable PL/pgSQL bodies.
-- [Schema Migrations] Preserve Oracle database-link atomicity instead of silently dropping those guarantees.
-- [Schema Migrations] A transient failure converting one package member no longer aborts the whole package.
-- [Schema Migrations] Deploy preparation now enforces roster coverage and can salvage converted records from failed chunks.
+- **[Schema Migrations]** Conversion completion and conversion success are now distinct, while reports consistently identify incomplete or missing artifacts, never-attempted objects, widened conversion scope, empty fallback output, and package-member outcomes.
+- **[Schema Migrations]** Reject converted DDL that would execute nothing, and stop shipping broken identifiers or unparseable PL/pgSQL bodies.
+- **[Schema Migrations]** Preserve Oracle database-link atomicity instead of silently dropping those guarantees.
+- **[Schema Migrations]** A transient failure converting one package member no longer aborts the whole package.
+- **[Schema Migrations]** Deploy preparation now enforces roster coverage and can salvage converted records from failed chunks.
+- **[Schema Migrations]** `pg_cron` is no longer treated as a generally required target-database extension or used to block jobs conversion.
+- **[Schema Migrations]** Conversion no longer fails solely because `plpgsql_check` is unavailable; reports identify when dependency validation was relaxed.
+- **[Schema Migrations]** Conversion is more reliable across Windows client configuration, resumed runs, dropped connections, deadlines, failed savepoint rollbacks, large decomposed packages, and Oracle `GOTO` transformations.
+- **[Schema Migrations]** Primary-key conversion now handles `ALTER TABLE IF EXISTS` without generating redundant primary-key work.
 
 ## [1.28.0] - 2026-07-30
 
