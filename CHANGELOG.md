@@ -6,6 +6,12 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.30.1] - 2026-09-03
+
+### Fixed
+
+- Restored interactive Microsoft Entra sign-in for affected users who encountered a blank browser page and error 70007 when adding or reauthenticating an account. ([#303](https://github.com/microsoft/vscode-pgsql/issues/303))
+
 ## [1.30.0] - 2026-08-31
 
 Stable release.
