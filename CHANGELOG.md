@@ -6,6 +6,29 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.31.0] - Unreleased
+
+### Added
+
+- **Microsoft Fabric PostgreSQL** — Open the Fabric Database Hub without a feature switch. With the opt-in `pgsql.enableFabricBrowse` setting, browse and connect to Fabric PostgreSQL databases and create a database from VS Code.
+- **Azure HorizonDB parameter groups** — View and manage server parameter groups from the HorizonDB management experience.
+- **Native PostgreSQL backend (opt-in preview)** — Try native Object Explorer, query execution, parameters, result export, plans, Object Properties, and scripting by enabling `pgsql.enableNativeBackend`. The existing backend remains the default.
+- **Database Agent issue controls** — Dismiss issues from the dashboard and review their dismissal details.
+- **[Schema Migrations]** Discover Oracle source objects and dependent schemas before configuring the PostgreSQL target, with a support matrix and inventory linked to the migration project.
+- **[Schema Migrations]** Generate a post-conversion setup package and link its instructions from the run report.
+- **[Schema Migrations]** Review a report-backed conversion summary and Object Explorer inventory, including per-object conversion outcomes, and use the improved Refix flow.
+- **[Schema Migrations]** Convert directly into target schemas rather than requiring intermediate schemas.
+
+### Fixed
+
+- Opening Query History from the Command Palette after a VS Code reload no longer crashes when query history contains entries. ([#305](https://github.com/microsoft/vscode-pgsql/issues/305))
+- Saved connection credentials are retained when connecting to an existing profile from a SQL file. ([#280](https://github.com/microsoft/vscode-pgsql/issues/280))
+- Azure Browse no longer repeatedly retries a failed database list request.
+- Editing a table no longer loses focus unexpectedly when switching away from its webview.
+- **[Schema Migrations]** Discover and conversion reports use consistent Oracle object names and include every PostgreSQL object produced by conversion.
+- **[Schema Migrations]** Conversion validation now checks only the relevant target schemas rather than unrelated schemas.
+- **[Schema Migrations]** Parallel conversion no longer stalls on `sys_refcursor` catalog locks.
+
 ## [1.30.1] - 2026-09-03
 
 ### Fixed
