@@ -10,9 +10,9 @@ Read more about pre-release versioning behavior for extensions in the
 
 Stable release.
 
-This is the stable release of the features introduced in `1.31.*`. There are no changes since `1.31.1`, but `1.32.0` marks these features as stable for all users.
+This is the stable release of the features introduced in `1.31.*`. There are no changes since `1.31.2`, but `1.32.0` marks these features as stable for all users.
 
-## [1.31.1] - 2026-09-30
+## [1.31.1 - 1.31.2] - 2026-09-30
 
 ### Added
 
