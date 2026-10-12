@@ -6,9 +6,7 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
-## [1.31.3] - Upcoming
-
-This migration hotfix is being prepared for the pre-release channel and has not yet been published.
+## [1.31.3] - 2026-10-12
 
 ### Added
 
