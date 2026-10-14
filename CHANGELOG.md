@@ -6,6 +6,28 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.32.1] - 2026-10-15
+
+Stable hotfix.
+
+This release brings the schema migration improvements from `1.31.3` to the stable channel.
+
+### Added
+
+- **[Schema Migrations]** Show **Reprocessing...** while conversion recovers objects from failed chunks.
+- **[Schema Migrations]** Automatically select Oracle thick mode when a detected client can be loaded, or thin mode when no client is detected. Report configuration errors when a detected client cannot load or switching modes requires a restart.
+
+### Fixed
+
+- **[Schema Migrations]** Keep dashboard progress and available actions consistent, and correct dashboard alignment.
+- **[Schema Migrations]** Count packages once, count objects affected by failed chunks, and reconcile conversion outcomes across reports and Object Explorer. Correct target names and package-member diffs.
+- **[Schema Migrations]** Continue discovery when source metadata visibility is incomplete, and measure extraction coverage against the discovered scope.
+- **[Schema Migrations]** Improve recovery from interrupted Oracle extraction and scratch-connection failures, and prevent unsafe restarts of finished conversion sessions.
+- **[Schema Migrations]** Resolve overloaded package members by their source identities when generating the setup package.
+- **[Schema Migrations]** Generate the setup package correctly when source package identities include scratch-schema prefixes.
+- **[Schema Migrations]** Handle long artifact paths on Windows across extraction, conversion, recovery, and artifact publication.
+- **[Schema Migrations]** Reduce post-conversion waiting and improve migration-project loading by limiting concurrent manifest reads.
+
 ## [1.31.3] - 2026-10-12
 
 ### Added
