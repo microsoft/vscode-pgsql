@@ -6,6 +6,31 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.33.0] - 2026-10-19
+
+### Added
+
+- **Podman support** — Create local PostgreSQL containers with Docker or Podman. The wizard honors the Container Tools runtime settings and detects Podman when Docker is not installed. ([#76](https://github.com/microsoft/vscode-pgsql/issues/76))
+- **SQL NULL highlighting** — Distinguish SQL NULL cells from literal text and empty values with theme-aware highlighting, enabled by default. Customize it with `pgsql.resultsGrid.highlightNullValues` and `pgsql.resultsGrid.nullValueBackgroundColor`; changes apply to existing results without rerunning a query. ([#190](https://github.com/microsoft/vscode-pgsql/issues/190))
+- **Native PostgreSQL backend (opt-in preview)** — Extend the preview to Edit Data, Server Dashboard, and connection validation. With `pgsql.enableNativeBackend` enabled, Test Connection and Save & Connect no longer wait for the tools service to start. The existing backend remains the default; native mode does not support `sslcertmode=require`.
+- **[Schema Migrations]** Review generated deployment SQL and withheld draft SQL separately in the migration's DDL package, with a manifest recording each object's conversion outcome.
+
+### Changed
+
+- **`@pgsql` chat participant deprecated** — The participant still works in this release, but is planned for removal in the next release. Use **Connect AI** on a database in the **Connections** tree to move to PostgreSQL MCP tools in Agent mode.
+- **[Schema Migrations]** Choose Azure HorizonDB or Azure Database for PostgreSQL flexible server explicitly and validate the target before continuing. Azure HorizonDB is selected by default. Targets identified as neither supported Azure platform cannot continue. Extension guidance, setup instructions, and reports now follow the selected platform.
+
+### Fixed
+
+- Query results headers, tabs, and completion notifications identify the database used for that execution after switching databases. Existing results retain their original labels until the next execution. ([#162](https://github.com/microsoft/vscode-pgsql/issues/162))
+- Editors warn when a saved connection's credentials change and let you reconnect with confirmation, preserving the editor's database and schema selection instead of silently replacing an active session. ([#162](https://github.com/microsoft/vscode-pgsql/issues/162))
+- AI Pipelines and Workflows now show an error with **Retry** if they cannot check database support, instead of remaining on the loading screen. Workflows also fixes incorrect worker-not-ready messages and lets you recheck readiness without reopening the Workbench. ([#311](https://github.com/microsoft/vscode-pgsql/issues/311))
+- **[Schema Migrations]** Oracle discovery connection timeouts show a dedicated message with **View logs**. Refresh retains the last successfully validated password when the Oracle connection identity is unchanged.
+- **[Schema Migrations]** Compare DDL and Fix with Copilot find converted objects in both deployable and draft folders, including trigger counterparts. Package-member comparisons focus on the selected member.
+- **[Schema Migrations]** Conversion Object Explorer uses the same target display names as the report while retaining fully qualified identities in tooltips. Report fallback documents open from both older and newer artifact layouts.
+- **[Schema Migrations]** A failure rendering an optional report no longer fails an otherwise completed conversion.
+- **[Schema Migrations]** Object-mapping CSV reports keep foreign keys with quoted, numbered names on separate rows instead of dropping them as duplicates.
+
 ## [1.32.1] - 2026-10-15
 
 Stable hotfix.
