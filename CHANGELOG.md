@@ -6,6 +6,31 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.33.1] - 2026-10-29
+
+### Added
+
+- **Azure PostgreSQL maintenance** — View and change maintenance schedules for Azure Database for PostgreSQL flexible servers from the dashboard. Review upcoming events and history, configure a custom weekly window in UTC, and reschedule eligible events or apply them immediately with confirmation.
+- **Azure HorizonDB cluster overview** — Explore compute pools and writer/reader node topology, high availability, parameter-group sync status, connection endpoints, and cluster metrics from the Horizon Cluster dashboard.
+- **Native PostgreSQL backend (opt-in preview)** — Extend the preview to AI Pipelines and Workflows, including workflow and pipeline lists, details, and pipeline graphs, without waiting for the tools service. Enable it with `pgsql.enableNativeBackend`; the existing backend remains the default.
+- **Azure connection shortcuts** — Open a saved Azure resource in Azure Portal, or a known PostgreSQL flexible server in Fabric Database Hub, directly from its connection context menu. Available for connected and disconnected profiles that retain the required resource metadata.
+- **[Schema Migrations]** Generated setup scripts deploy from the per-object DDL package by default, with per-object deployment results on Bash and PowerShell. A legacy `deploy.sql` fallback remains available when the package cannot be used.
+
+### Changed
+
+- **Azure HorizonDB management** — Update cluster creation, browsing, and management to the latest API and resource model, with pool-based compute and settings, node topology, and separately discovered connection endpoints.
+- **[Schema Migrations]** Scratch-database checks run automatically after selecting a database. A **Database checks** card shows server compatibility and PostgreSQL extension results, with **Check again**, extension details, and platform-specific setup guidance.
+
+### Fixed
+
+- Improve Fabric browsing and database creation with remembered account selections, more reliable refresh and connection selection, clearer empty-workspace guidance, and customizable saved connection names.
+- Opening Connection String while the connection dialog is loading no longer leaves a blank view.
+- Improve Schema Designer handling of quoted identifiers, schema filters, and empty diagrams.
+- Improve dashboard reliability with corrected UTC time ranges, better layouts in narrow panels, and fixes for HorizonDB metric collection.
+- Improve the native backend preview's recovery from connection loss, JSON export compatibility, and dashboard metric collection.
+- **[Schema Migrations]** Improve Oracle package and routine conversion, preserve previously omitted source, and make dependency handling and deployment reports more accurate.
+- **[Schema Migrations]** Oracle database links now produce manual-review setup templates with password placeholders, with improved handling of foreign-data-wrapper dependencies.
+
 ## [1.33.0] - 2026-10-19
 
 ### Added
