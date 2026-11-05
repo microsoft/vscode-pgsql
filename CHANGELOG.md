@@ -6,6 +6,12 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [Unreleased]
+
+### Changed
+
+- **AI chat LMTs with MCP equivalents deprecated** — These LMTs will be removed in a future release in favor of their MCP equivalents. This affects users on VS Code versions earlier than `1.102.0`, the minimum version required for MCP support; the affected tools will be gracefully disabled for those users. LMTs without MCP equivalents are not affected. This is a deprecation warning only; the tools remain available in this release. Upgrade to VS Code `1.102.0` or later to use the equivalent MCP tools.
+
 ## [1.33.1] - 2026-10-29
 
 ### Added
