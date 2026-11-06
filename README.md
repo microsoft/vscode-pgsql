@@ -33,6 +33,12 @@ Browse Azure to easily find and connect to your Azure Database for PostgreSQL se
 
 ![Connect to Azure PostgreSQL](img/connect-azure-vid.gif)
 
+### PostgreSQL in Microsoft Fabric
+
+Browse Microsoft Fabric workspaces and PostgreSQL databases with Microsoft Entra authentication. Select your account and tenant, connect to an existing database or create a new one in a workspace, then query and explore it with the extension's existing tools. Open Database Hub to manage your databases in Microsoft Fabric.
+
+![Browse Fabric with Microsoft Entra account, tenant, and workspace selection](img/fabric-browse.png)
+
 ### Explore your database
 
 Easily explore your database objects, including tables, views, functions, and more.
