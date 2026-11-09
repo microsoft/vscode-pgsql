@@ -18,27 +18,19 @@ Read more about pre-release versioning behavior for extensions in the
 
 - **AI chat LMTs with MCP equivalents deprecated** — These LMTs will be removed in a future release in favor of their MCP equivalents. This affects users on VS Code versions earlier than `1.102.0`, the minimum version required for MCP support; the affected tools will be gracefully disabled for those users. LMTs without MCP equivalents are not affected. This is a deprecation warning only; the tools remain available in this release. Upgrade to VS Code `1.102.0` or later to use the equivalent MCP tools.
 - **Azure HorizonDB cluster topology** — Navigate larger compute-pool and node layouts with a pannable, zoomable diagram, keyboard controls, and a text-first hierarchy view. Improve readability and endpoint layouts in narrow panels.
-- **Native schema visualization** — Reduce metadata-loading round trips for larger databases when `pgsql.enableNativeBackend` is enabled. The existing backend is unchanged.
 - **[Schema Migrations] DDL package** — Conversion, repair, reports, and setup use the per-object DDL package as the source of truth. Setup for package-backed sessions deploys eligible objects from that package rather than a consolidated `deploy.sql`, with clearer deployment errors and interruption handling.
 
 ### Fixed
 
 - Saving an untitled SQL editor no longer causes the next execution to fail with `No file corresponding to the given URI`. Existing results remain available after saving. ([#325](https://github.com/microsoft/vscode-pgsql/issues/325))
-<!-- Release gate: merge the paired extension and tools-service GSS changes and bundle their production service build before publishing this entry. -->
-- Prevent localhost connections from stalling during GSS encryption negotiation on domain-joined Macs. Advanced Connection Settings now offers GSS encryption mode; the default disables GSS encryption for direct loopback connections without disabling Kerberos authentication or changing ordinary TLS settings. Explicit modes are supported by the tools-service backend; the native backend reports **Require** as unsupported. Fabric connections keep GSS encryption disabled and require TLS. ([#323](https://github.com/microsoft/vscode-pgsql/issues/323))
-- SSH connections retain the database hostname for authentication and TLS certificate verification while routing traffic through the tunnel. With the native backend, a new connection can replace a failed shared SSH tunnel without first closing every older connection.
-- Connection failures show clearer network diagnostics and troubleshooting guidance, and Object Explorer retains an explicit error and retry action after a failed connection attempt.
-- With the native backend enabled, refreshing an Object Explorer ancestor no longer displays one database's objects under another database. Reopening Object Explorer Search also avoids showing delayed results from a closed search panel.
+- Prevent localhost connections from stalling during GSS encryption negotiation on domain-joined Macs. Advanced Connection Settings now offers GSS encryption mode; the default disables GSS encryption for direct loopback connections without disabling Kerberos authentication or changing ordinary TLS settings. Fabric connections keep GSS encryption disabled and require TLS. ([#323](https://github.com/microsoft/vscode-pgsql/issues/323))
+- SSH connections retain the database hostname for authentication and TLS certificate verification while routing traffic through the tunnel.
+- Object Explorer retains an explicit error and retry action after a failed connection attempt.
 - Dashboards opened while disconnected refresh after connecting from Object Explorer. Correct dashboard tab selection after loading Azure metadata, improve HorizonDB chart refresh recovery, and fix HorizonDB Sessions and Deadlocks chart selection.
-- Slow tools-service startup no longer prematurely fails otherwise healthy background startup in native mode. Language features and MCP registration recover when the service becomes ready, and a status indicator offers logs and retry guidance if startup fails.
-- Native query results and exports remain available when another independent result worker starts. Large queries that repeat a named parameter no longer overflow the call stack before the parameter grid opens.
-- Native JSON export preserves large numbers inside JSON/JSONB values, and graph results accept large vertex and edge IDs that can be represented exactly.
-- Native Sessions monitoring works with non-ISO PostgreSQL `DateStyle` settings, and Edit Data preserves negative zero in `real` and `double precision` columns.
 - AI pipeline runs load when optional workflow metadata is unavailable. Failed run refreshes pause until **Retry runs** is selected, keeping previously loaded runs visible.
 - **[Schema Migrations]** Setup instructions open correctly from refreshed reports and remain available when reopening a completed migration with matching setup artifacts. Object views follow repaired DDL files moved out of the drafts folder, and package-member comparisons match quoted and special-character names to the correct artifacts.
 - **[Schema Migrations]** Oracle discovery includes stale objects without compilation errors while excluding Oracle-internal objects. Improve cross-schema dependency extraction, include sequences used by column defaults, preserve comments on views and materialized views, and extract evolved types only once.
 - **[Schema Migrations]** Improve conversion of partitioned-table keys, event triggers, package-member calls, quoted view columns, and procedure output arguments. Repair validation rechecks affected dependent objects and keeps reports consistent with the DDL package.
-<!-- Release gate: bundle a production tools-service build containing the Windows artifact-reader and directory-lock fixes before publishing this entry. -->
 - **[Schema Migrations]** Improve Windows handling of long per-object artifact paths and transient directory locks, and preserve existing report pages when a replacement cannot be published.
 
 ## [1.33.1] - 2026-10-29
