@@ -6,6 +6,20 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.33.3] - 2026-11-10
+
+### Changed
+
+- **Microsoft Fabric PostgreSQL authentication** — Connection dialogs explain when a Fabric endpoint requires Microsoft Entra authentication and prevent selecting an unsupported authentication method for those endpoints.
+- **[Schema Migrations]** Clarify setup deployment instructions and how to resume interrupted deployments using an existing deployment journal.
+
+### Fixed
+
+- **[Schema Migrations]** Fix with Copilot identifies the selected object explicitly and makes repair tools available when the conversation starts. Resolve guidance explains manual verification and report refresh before accepting an object as converted.
+- **[Schema Migrations]** When a selected object's conversion is blocked by a single unconverted direct dependency, Fix with Copilot targets that upstream blocker and reports the repair outcomes for both objects separately.
+- **[Schema Migrations]** Coordinate compilation of cyclic dependencies so required types and sequences are available before dependent objects compile, avoiding missing-type errors, lock timeouts, and incorrect fallback conversions.
+- **[Schema Migrations]** Retry transient Windows file locks when publishing migration artifacts and cleaning up temporary files, reducing failures that can leave setup instructions unavailable.
+
 ## [1.33.2] - 2026-11-09
 
 ### Added
