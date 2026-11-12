@@ -6,6 +6,23 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.34.0] - 2026-11-12
+
+Stable release.
+
+This release brings the features and fixes introduced in `1.33.*` to the stable channel, including Podman support, SQL NULL highlighting, Azure PostgreSQL maintenance, Fabric PostgreSQL browsing, HorizonDB management, and schema migration improvements. The native PostgreSQL backend remains an opt-in preview.
+
+It also includes the following changes since `1.33.3`.
+
+### Changed
+
+- **[Schema Migrations]** Setup generation is shown as the final conversion step. If generation continues after the initial wait, the migration report remains available and setup instructions become available when generation finishes.
+- **DBAgent MCP tools** — Remove `dbagent_approve_action`, `dbagent_reject_action`, `dbagent_create_instruction`, `dbagent_list_instructions`, and `dbagent_revoke_instruction`. `dbagent_acknowledge_issue` closes a Resolved issue.
+
+### Fixed
+
+- **[Schema Migrations]** Refresh Reports updates reports, object mappings, and setup artifacts at their original paths after Resolve or Fix with Copilot, so links continue to open the current artifacts. Setup SQL files retain identity-based names across refreshes.
+
 ## [1.33.3] - 2026-11-10
 
 ### Changed
