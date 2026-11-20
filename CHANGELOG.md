@@ -16,7 +16,7 @@ Read more about pre-release versioning behavior for extensions in the
 
 ### Changed
 
-- The native PostgreSQL backend is now the default. The `pgsql.enableNativeBackend` setting still lets you select the legacy backend.
+- The native PostgreSQL backend is now the default. To switch to the legacy PostgreSQL Tools Service (PGTS) backend, set `"pgsql.enableNativeBackend": false` in your user `settings.json`, then run **Developer: Reload Window** from the Command Palette.
 - Removed the deprecated `@pgsql` chat participant and language-model tools that duplicated PostgreSQL MCP capabilities.
 
 ### Fixed
