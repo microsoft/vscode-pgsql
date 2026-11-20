@@ -6,6 +6,33 @@ pre-releases and **even** minor version numbers for stable releases.
 Read more about pre-release versioning behavior for extensions in the
 [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions).
 
+## [1.35.0] - YYYY-MM-DD
+
+### Added
+
+- **Connection Dialog V2** — The experimental dialog supports Microsoft Entra authentication, passwordless connections, advanced connection settings, and organizing saved connections by scope and server group.
+- **Microsoft Fabric** — Open Fabric PostgreSQL connection links directly in VS Code.
+- [Schema Migrations] On HorizonDB targets with `pg_durable` enabled, Oracle conversion can translate supported single-write autonomous transactions into durable launches.
+
+### Changed
+
+- The native PostgreSQL backend is now the default. The `pgsql.enableNativeBackend` setting still lets you select the legacy backend.
+- Removed the deprecated `@pgsql` chat participant and language-model tools that duplicated PostgreSQL MCP capabilities.
+
+### Fixed
+
+- Connection dialogs accept long Microsoft Entra access tokens pasted into the password field. ([#331](https://github.com/microsoft/vscode-pgsql/issues/331))
+- Edit Data lets you select a value for a required Boolean field that hasn't been set. ([#332](https://github.com/microsoft/vscode-pgsql/issues/332))
+- Execute Statement works when the selection starts with whitespace.
+- Submitting an empty password for a saved connection attempts authentication without changing the saved profile or its password preference.
+- Native Object Properties opens faster by reusing metadata queries. Foreign table previews show the expected columns and rows.
+- PostgreSQL tools preserve TLS settings, and native SSH connections verify the server's host key.
+- [Schema Migrations] Failed conversions no longer open internal reports. Migration fixes show clearer results, and schema comparisons reuse existing drafts rather than opening extra untitled tabs.
+- [Schema Migrations] Object comparisons prompt you to choose a database when the connection does not specify one.
+- [Schema Migrations] Extraction progress shows a compact, expandable schema list, and Conversion Explorer no longer flickers while loading.
+- [Schema Migrations] Concurrent projects keep their authentication, progress, and logs isolated. Oracle schema selection works for catalog-only logins and uses Oracle's metadata to identify system-maintained schemas.
+- [Schema Migrations] Conversion and deployment handle more Windows file-lock scenarios. Generated deployment output excludes routines withheld by the final compilation check and explains why they were withheld.
+
 ## [1.34.0] - 2026-11-12
 
 Stable release.
