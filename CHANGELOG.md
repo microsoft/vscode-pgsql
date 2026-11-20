@@ -12,7 +12,6 @@ Read more about pre-release versioning behavior for extensions in the
 
 - **Connection Dialog V2** — The experimental dialog supports Microsoft Entra authentication, passwordless connections, advanced connection settings, and organizing saved connections by scope and server group.
 - **Microsoft Fabric** — Open Fabric PostgreSQL connection links directly in VS Code.
-- [Schema Migrations] On HorizonDB targets with `pg_durable` enabled, Oracle conversion can translate supported single-write autonomous transactions into durable launches.
 
 ### Changed
 
